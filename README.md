@@ -7,7 +7,7 @@ Course materials for Daniel Garza, M.A. Lesson numbering is continuous across HI
 ## Naming rules
 
 - Lowercase only, words separated by hyphens, no spaces, underscores, or other punctuation.
-- Folders: `unit-N-short-name/lesson-N-short-name/`
+- Folders: `unit-N/lesson-N/`, for example `unit-3/lesson-7/warm-ups/`
 - Files: `[type]-[lesson-number]-[short-name].html`, for example `warm-up-7-1-land-won-land-contested.html`
 - Teacher keys are not stored in this repository (they are blocked by `.gitignore`).
 
@@ -17,22 +17,22 @@ Course materials for Daniel Garza, M.A. Lesson numbering is continuous across HI
 
 | Lesson | Folder |
 |---|---|
-| 1 | `unit-1-colonies-revolution-and-republic/lesson-1-colonial-america-and-the-imperial-crisis` |
-| 2 | `unit-1-colonies-revolution-and-republic/lesson-2-revolution-and-the-meaning-of-independence` |
-| 3 | `unit-1-colonies-revolution-and-republic/lesson-3-constitution-and-the-contested-early-republic` |
+| 1 | `unit-1/lesson-1` |
+| 2 | `unit-1/lesson-2` |
+| 3 | `unit-1/lesson-3` |
 
 ### Unit 2 - An Expanding Nation
 
 | Lesson | Folder |
 |---|---|
-| 4 | `unit-2-an-expanding-nation/lesson-4-the-market-revolution-and-sectional-change` |
-| 5 | `unit-2-an-expanding-nation/lesson-5-jacksonian-democracy-and-the-limits-of-white-male-citizenship` |
-| 6 | `unit-2-an-expanding-nation/lesson-6-slavery-and-reform-in-an-expanding-republic` |
+| 4 | `unit-2/lesson-4` |
+| 5 | `unit-2/lesson-5` |
+| 6 | `unit-2/lesson-6` |
 
 ### Unit 3 - A House Divided and Rebuilt
 
 | Lesson | Folder |
 |---|---|
-| 7 | `unit-3-a-house-divided-and-rebuilt/lesson-7-expansion-slavery-and-the-road-to-disunion` |
-| 8 | `unit-3-a-house-divided-and-rebuilt/lesson-8-civil-war-and-emancipation` |
-| 9 | `unit-3-a-house-divided-and-rebuilt/lesson-9-reconstruction-and-contested-citizenship` |
+| 7 | `unit-3/lesson-7` |
+| 8 | `unit-3/lesson-8` |
+| 9 | `unit-3/lesson-9` |
