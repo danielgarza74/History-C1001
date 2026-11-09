@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Who Counts as “the People”? · Source Detective 5</title><style>
+:root{--p:#6F2A2A;--bg:#FCF3E8;--a:#B24A32;--g:#C98A4A;--hi:#E8C994;--s:#8A5A22;--v:#2E6B3E;--t:#2B1616;--card:#fff;--line:#e6d6c2;--mut:#6b5450}
+@media (prefers-color-scheme: dark){:root{--bg:#1d1212;--card:#2a1b1b;--t:#f5e9dc;--line:#4a3333;--mut:#c9b3a8;--hi:#5a4524}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#6F2A2A;color:#FCF3E8;padding:30px 16px 24px;border-bottom:6px solid #C98A4A}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E8C994}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E8C994}
+.flag{display:inline-block;margin-top:12px;background:#B24A32;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2{color:var(--hi)}}
+h3{margin:.2em 0 .4em}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#FCF3E8;color:#2b1616;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(232,201,148,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#b9aaa5;color:#eee;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(232,201,148,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#6F2A2A;color:#E8C994;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">SOURCE DETECTIVE 5 · 1828–1840</div>
+<h1>Who Counts as “the People”?</h1>
+<div class="sub">Jacksonian Democracy and the Limits of White Male Citizenship · Crack the Case</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>How did Andrew Jackson both expand and limit democracy, and what were the consequences of his presidency for the Union, for Indigenous nations, and for the national economy?</b></p>
+<p style="margin:.3em 0">Your job: read the background, crack five case files from the years before and during Jackson’s presidency, then close the case with a one-page essay.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol>
+<li><b>Part 1:</b> Read the Background Reading and answer the one-sentence check.</li>
+<li><b>Part 2:</b> For each case file, read the excerpt, then tap what the author wants:<ul><li><b>★ EXPAND</b>: opens power to more people (at least to more White men)</li><li><b>◆ LIMIT</b>: keeps power, rights, or land away from some group</li><li><b>● A VOICE</b>: wants to be heard or to be free (has no power to decide)</li></ul></li>
+<li>Type one context fact from the Background Reading, then copy the clue words that prove your choice and finish the sentence “The author wants…”.</li>
+<li><b>Part 3:</b> Write your one-page essay and check the four boxes.</li>
+<li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Reading</h2>
+<div class="box"><div class="article"><h3>The People’s President and the Limits of “the People”</h3><p>When Andrew Jackson took the oath of office in March 1829, thousands of ordinary Americans crowded into Washington, and even into the White House, to celebrate. To his supporters, the moment was a victory for the “common man.” Their anger went back to 1824, when Jackson won the most popular votes and the most electoral votes but not a majority, so the House of Representatives chose John Quincy Adams instead. Jackson’s followers called it a “corrupt bargain” and spent four years building a new Democratic Party, organized by Martin Van Buren of New York, that swept Jackson into the presidency in 1828.</p><p>Jackson rode a wave of change that had started before him. In the early 1800s most states required a man to own property or pay taxes before he could vote. One state after another dropped those rules for White men. New York’s convention of 1821 shows how this worked. Delegates rejected the warnings of conservatives such as Chancellor James Kent, the state’s top judge, and opened the vote to nearly all White men. Yet the same convention raised the property requirement for Black men to $250, which shut almost all of them out. Campaigns turned into loud, popular contests with parades, barbecues, and party newspapers, and in the early 1830s parties began choosing presidential candidates at national nominating conventions instead of in closed meetings of congressmen.</p><p>Once in office, Jackson claimed to speak for “the people” against privileged insiders. He practiced “rotation in office,” replacing about one-fifth of federal officeholders with his own supporters, a practice his critics called the spoils system. He also went to war against the Second Bank of the United States, the nation’s largest corporation, which held the government’s money and issued much of the country’s paper currency. In 1832 Jackson vetoed the bill to renew the Bank’s charter, and he won reelection easily that fall. He then moved federal deposits into favored state banks. Those banks lent freely and land speculation boomed. When British lenders tightened credit and cotton prices fell, the Panic of 1837 began a depression that lasted for years. Jackson’s opponents, who mocked him as “King Andrew the First,” had already formed the Whig Party in 1834, and the contest between Democrats and Whigs created a two-party system that lasted about twenty years.</p><p>Jackson also defended the Union when a state challenged federal power. South Carolina, angry over the high Tariff of 1828 and afraid that a strong national government might someday threaten slavery, declared the tariffs “null, void, and no law” in 1832. Jackson called nullification treason and asked Congress for the Force Bill, which allowed him to use the army to enforce federal law. Congress passed it in 1833 along with Henry Clay’s compromise tariff, so both sides could claim victory.</p><p>The limits of Jacksonian democracy were sharpest for people outside the circle of White men. Women could not vote. In 1830 Jackson signed the Indian Removal Act, which let him trade western land for the eastern homelands of Indigenous nations, home to nearly 100,000 people. The Cherokee, who had a written constitution, a newspaper, and farms, fought removal in court. In <i>Worcester v. Georgia</i> (1832) the Supreme Court ruled that Georgia’s laws had no force inside the Cherokee Nation, but Jackson did nothing to enforce the ruling. In 1838 and 1839 the army forced about 17,000 Cherokee west on the Trail of Tears, and thousands died. That same year, Pennsylvania adopted a new constitution that widened voting for White men but added the word “white” to its voting clause, taking the ballot from Black men who had voted there for decades. Black Pennsylvanians did not win it back until the Fifteenth Amendment in 1870.</p><p>The Age of Jackson leaves a puzzle. More men took part in politics than ever before, yet in other ways the meaning of “the people” grew narrower. As you open each case file, ask who the author counts as “the people” and who is left out.</p></div>
+<label for="rdg">In one sentence, name one way democracy expanded and one way it was limited in the Age of Jackson.</label>
+<textarea id="rdg" data-id="rdg" rows="2"></textarea></div>
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 5 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<section class="case" id="case1" data-i="1"><div><span class="chip">1821</span><span class="cnum">Case file 1 of 5</span></div>
+<div class="who">Who: Chancellor James Kent, New York’s highest-ranking judge<br>From: Speech at the New York Constitutional Convention</div>
+<p class="intro">At New York’s 1821 convention, delegates debated whether a man had to own land to vote for the state senate.</p>
+<blockquote>The notion that every man that works a day on the road, or serves an idle hour in the militia, is entitled as of right to an equal participation in the whole power of the government, is most unreasonable, and has no foundation in justice.&nbsp;.&nbsp;. . Society is an association for the protection of property as well as of life, and the individual who contributes only one cent to the common stock, ought not to have the same power and influence in directing the property concerns of the partnership, as he who contributes his thousands.</blockquote>
+<div class="cite">James Kent, speech in the New York Constitutional Convention, September 1821, in <i>Reports of the Proceedings and Debates of the Convention of 1821</i>, reported by Nathaniel H. Carter, William L. Stone, and Marcus T. C. Gould (Albany: E. and E. Hosford, 1821). Garza Archive P10.1.</div>
+<div class="help"><b>Word help:</b> militia = citizen soldiers · participation = a share · common stock = the shared fund (here, society’s wealth) · partnership = a business owned by several people</div>
+<div class="ask">What does the author want?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ EXPAND<small>opens power to more people (at least to more White men)</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMIT<small>keeps power, rights, or land away from some group</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx1">Context: what was going on? Use one fact from the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="One fact from the Background Reading that explains this source"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section><section class="case" id="case2" data-i="2"><div><span class="chip">1829</span><span class="cnum">Case file 2 of 5</span></div>
+<div class="who">Who: President Andrew Jackson<br>From: First Annual Message to Congress</div>
+<p class="intro">In his first yearly message to Congress, the new president asked for changes in how presidents are chosen and how government jobs are held.</p>
+<blockquote>To the people belongs the right of electing their Chief Magistrate; it was never designed that their choice should in any case be defeated, either by the intervention of electoral colleges or by the agency confided, under certain contingencies, to the House of Representatives.&nbsp;.&nbsp;. . So far, therefore, as the people can with convenience speak, it is safer for them to express their own will.&nbsp;.&nbsp;. . In a country where offices are created solely for the benefit of the people no one man has any more intrinsic right to official station than another.</blockquote>
+<div class="cite">Andrew Jackson, “First Annual Message,” December 8, 1829, American Presidency Project, ed. Gerhard Peters and John T. Woolley. Garza Archive P10.9.</div>
+<div class="help"><b>Word help:</b> Chief Magistrate = the president · electoral colleges = electors who formally pick the president · contingencies = special situations · intrinsic = built-in · official station = a government job</div>
+<div class="ask">What does the author want?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ EXPAND<small>opens power to more people (at least to more White men)</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMIT<small>keeps power, rights, or land away from some group</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx2">Context: what was going on? Use one fact from the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="One fact from the Background Reading that explains this source"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section><section class="case" id="case3" data-i="3"><div><span class="chip">1830</span><span class="cnum">Case file 3 of 5</span></div>
+<div class="who">Who: President Andrew Jackson<br>From: Second Annual Message to Congress (removal section)</div>
+<p class="intro">In his second yearly message, Jackson told Congress what the removal of Indigenous nations would bring.</p>
+<blockquote>It will place a dense and civilized population in large tracts of country now occupied by a few savage hunters.&nbsp;.&nbsp;. . It will relieve the whole State of Mississippi and the western part of Alabama of Indian occupancy, and enable those States to advance rapidly in population, wealth, and power. It will separate the Indians from immediate contact with settlements of whites; free them from the power of the States; enable them to pursue happiness in their own way and under their own rude institutions .&nbsp;.&nbsp;.</blockquote>
+<div class="cite">Andrew Jackson, “Second Annual Message,” December 6, 1830, in <i>A Compilation of the Messages and Papers of the Presidents</i>, ed. James D. Richardson, vol. 2 (Washington, DC: Government Printing Office, 1896). Garza Archive P10.19.</div>
+<div class="help"><b>Word help:</b> dense = crowded · savage = Jackson’s insulting word for Indigenous people · occupancy = living on and holding land · rude = simple, rough (another insult)</div>
+<div class="ask">What does the author want?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ EXPAND<small>opens power to more people (at least to more White men)</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMIT<small>keeps power, rights, or land away from some group</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx3">Context: what was going on? Use one fact from the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="One fact from the Background Reading that explains this source"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section><section class="case" id="case4" data-i="4"><div><span class="chip">1832</span><span class="cnum">Case file 4 of 5</span></div>
+<div class="who">Who: President Andrew Jackson<br>From: Veto message to the Senate</div>
+<p class="intro">Jackson explains to the Senate why he will not sign the bill renewing the charter of the Second Bank of the United States.</p>
+<blockquote>It is to be regretted that the rich and powerful too often bend the acts of government to their selfish purposes.&nbsp;.&nbsp;. . [W]hen the laws undertake to add to these natural and just advantages artificial distinctions, to grant titles, gratuities, and exclusive privileges, to make the rich richer and the potent more powerful, the humble members of society—the farmers, mechanics, and laborers—who have neither the time nor the means of securing like favors to themselves, have a right to complain of the injustice of their Government.</blockquote>
+<div class="cite">Andrew Jackson, “Veto Message Regarding the Bank of the United States,” July 10, 1832, Avalon Project, Yale Law School. Garza Archive P10.27.</div>
+<div class="help"><b>Word help:</b> artificial distinctions = special ranks the law creates · gratuities = gifts · exclusive privileges = special rights only a few get · potent = powerful · mechanics = skilled workers such as carpenters</div>
+<div class="ask">What does the author want?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ EXPAND<small>opens power to more people (at least to more White men)</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMIT<small>keeps power, rights, or land away from some group</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx4">Context: what was going on? Use one fact from the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="One fact from the Background Reading that explains this source"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section><section class="case" id="case5" data-i="5"><div><span class="chip">1838</span><span class="cnum">Case file 5 of 5</span></div>
+<div class="who">Who: Robert Purvis, chairman, for a committee of Black Philadelphians<br>From: Public appeal to the voters of Pennsylvania</div>
+<p class="intro">A committee of Black Philadelphians writes to the voters who will decide whether to approve Pennsylvania’s new constitution.</p>
+<blockquote>We appeal to you from the decision of the “Reform Convention,” which has stripped us of a right peaceably enjoyed during forty-seven years under the Constitution of this commonwealth.&nbsp;.&nbsp;. . Was it made the business of the Convention to deny “that all men are born equally free,” by making political rights depend upon the skin in which a man is born? or to divide what our fathers bled to unite, to wit, TAXATION and REPRESENTATION?</blockquote>
+<div class="cite">Robert Purvis et al., <i>Appeal of Forty Thousand Citizens, Threatened with Disfranchisement, to the People of Pennsylvania</i> (Philadelphia: Merrihew and Gunn, 1838), 3. Garza Archive P10.64.</div>
+<div class="help"><b>Word help:</b> commonwealth = the state (Pennsylvania) · Reform Convention = the meeting that rewrote Pennsylvania’s constitution · to wit = namely · disfranchisement = losing the right to vote</div>
+<div class="ask">What does the author want?</div>
+<div class="stances" role="group" aria-label="Stance for case file 5"><button type="button" class="st" data-v="N" aria-pressed="false">★ EXPAND<small>opens power to more people (at least to more White men)</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMIT<small>keeps power, rights, or land away from some group</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx5">Context: what was going on? Use one fact from the Background Reading.</label>
+<textarea id="ctx5" data-id="ctx5" rows="2" placeholder="One fact from the Background Reading that explains this source"></textarea>
+<label for="note5">Clue words</label>
+<textarea id="note5" data-id="note5" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>How did Andrew Jackson both expand and limit democracy, and what were the consequences of his presidency for the Union, for Indigenous nations, and for the national economy?</b></p></div>
+<div class="box"><p><b>Your essay question:</b> Did the Age of Jackson mainly expand democracy, or did it mainly narrow who counted as “the people”? Take a position and defend it with the case files.</p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> one consequence of Jackson’s presidency for the Union, for Indigenous nations, or for the economy.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion names a consequence for the Union, Indigenous nations, or the economy.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 2 · AN EXPANDING NATION | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+(function(){
+var PACKET="C1001_L5_Source_Detective", STORE="c1001_lesson5_source_detective", COURSE="HIST C1001", NC=5;
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  if(!val('rdg'))m.push('Background Reading check');
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of 5 case files cracked';$('mbar').style.width=(n*20)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var t={national:0,state:0,voice:0};for(var i=1;i<=NC;i++){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++}
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:t};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){e.addEventListener(e.type==='checkbox'?'change':'input',function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

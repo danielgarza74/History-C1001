@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hostility, Humanity, or Abuse of Power? · Thinking Like a Historian 5</title><style>
+:root{--p:#6F2A2A;--bg:#FCF3E8;--a:#B24A32;--g:#C98A4A;--hi:#E8C994;--s:#8A5A22;--v:#2E6B3E;--t:#2B1616;--card:#fff;--line:#e6d6c2;--mut:#6b5450}
+@media (prefers-color-scheme: dark){:root{--bg:#1d1212;--card:#2a1b1b;--t:#f5e9dc;--line:#4a3333;--mut:#c9b3a8;--hi:#5a4524}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#6F2A2A;color:#FCF3E8;padding:30px 16px 24px;border-bottom:6px solid #C98A4A}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E8C994}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E8C994}
+.flag{display:inline-block;margin-top:12px;background:#B24A32;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#FCF3E8;color:#2b1616;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(232,201,148,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(232,201,148,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#6F2A2A;color:#E8C994;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+
+.grp{margin:34px 0 4px;padding:12px 16px;background:var(--p);color:#fff;border-radius:10px}
+.grp .gl{font:700 12px Arial,sans-serif;letter-spacing:.14em;color:var(--hi)}
+.grp h2{color:#fff;margin:4px 0 0;font-size:21px}
+.dq ul{margin:.4em 0;padding-left:1.2em}
+.dq li{margin:.35em 0;font:15px/1.5 Arial,sans-serif}
+.rd h3{margin-top:0}
+.essaysamp p{margin:.7em 0}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 5 · 1828–1840</div>
+<h1>Hostility, Humanity, or Abuse of Power?</h1>
+<div class="sub">Jacksonian Democracy and the Limits of White Male Citizenship · Thinking Like a Historian</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>Why did the United States force Native nations west of the Mississippi in the 1830s: because Andrew Jackson and white Americans were hostile to Native people, because Jackson sincerely tried to protect them, or because the government abused its power and broke its own treaties?</b></p><p style="margin:.3em 0">Your job: read the background, crack 4 case files (the documents historians use as evidence), then close the case with a one-page essay.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol><li><b>Part 1:</b> Read the Background Reading and answer the one-sentence check.</li><li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most. The three buttons change with each debate, so read them. Each has a symbol (★, ◆, ●) as well as a label.</li><li>Type who made the source, when, and the key fact (use the Background Reading). Then copy the clue words that prove your choice and finish the sentence “This source helps…”.</li><li><b>Part 3:</b> Answer the central question. Write your one-page essay and check the four boxes.</li><li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Reading</h2>
+<div class="box rd"><div class="article"><h3>A Law, a Policy, and a Trail of Tears</h3><p>In the early 1800s the Cherokee, Creek, Choctaw, Chickasaw, and Seminole nations still held large lands in the Southeast, inside the borders of states such as Georgia, Alabama, and Mississippi. Many of these peoples had signed treaties with the United States that promised their borders. The Cherokee went further. They wrote a constitution in 1827, published a newspaper, the Cherokee Phoenix, in English and in their own alphabet, and called themselves a nation with a government of its own. Georgia claimed all of that land for itself, and in 1830 its laws were extended over Cherokee territory, which meant Cherokees lost many legal rights. White settlers wanted the farmland, and the discovery of gold on Cherokee land in Georgia made the pressure worse.</p><p>Andrew Jackson, who had fought Native nations in the Southeast as a general, became president in 1829 and made removal a priority. Congress passed the Indian Removal Act on May 28, 1830, which offered Native nations land west of the Mississippi in exchange for their eastern homes, and on December 6, 1830, in his second annual message to Congress, Jackson defended the policy. The vote in the House was close, 102 to 97, and the law did not say that anyone could be forced to go; it authorized the president to negotiate exchanges. The Choctaw signed the first removal treaty in 1830. In practice, though, the pressure from states, settlers, and federal agents was heavy, and most nations in the Southeast were moved west during the 1830s. Cherokee leaders fought back with petitions, a Supreme Court case, and public appeals. In Worcester v. Georgia (1832) the Court held that Georgia’s laws could not be enforced on Cherokee land, yet Georgia ignored the decision and the federal government did not enforce it. John Ross, the Cherokee principal chief, argued that treaties guaranteed their land. A small group of Cherokees signed the Treaty of New Echota in 1835 giving up the land, although most of the nation rejected it. In 1838 and 1839 federal troops rounded up some 16,000 Cherokees and marched them west on the Trail of Tears, and about 4,000 of them died.</p><p>Supporters and critics argued about the policy from the start. Lewis Cass, who had served as governor of Michigan Territory and as Jackson’s Secretary of War, wrote in 1830 that removal would be humane, and Jeremiah Evarts, a missionary leader in Boston, answered under the name “William Penn” that it was unjust. Historians still disagree. Oscar Handlin, Theda Perdue, and Anthony Wallace have argued that Jackson’s own racism and that of his supporters drove the policy. Robert Remini and Francis Paul Prucha have defended Jackson, saying he believed removal would protect Native people from state governments and from destruction. Alfred A. Cave takes a third position: the law never allowed force, so the use of it, and the broken treaties, were an abuse of power by the government. As you read each source, ask whose argument it helps the most.</p></div>
+<label for="rdg">In one sentence, explain what the Indian Removal Act of 1830 said it would do and what happened to the Cherokee in 1838 and 1839.</label>
+<textarea id="rdg" data-id="rdg" rows="2"></textarea></div>
+
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 4 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<div class="grp"><div class="gl">DEBATE 1 · CASE FILES 1–4</div><h2>Indian Removal: Hostility, Humanity, or Abuse of Power?</h2></div>
+<div class="box dq"><div class="lab">The debate:</div><p style="margin:.3em 0"><b>Why did the United States force Native nations west of the Mississippi in the 1830s: because Andrew Jackson and white Americans were hostile to Native people, because Jackson sincerely tried to protect them, or because the government abused its power and broke its own treaties?</b></p><ul><li><b>★ HOSTILE POLICY</b>: Oscar Handlin, Theda Perdue, and Anthony Wallace argue that Jackson’s hostility and the racism of his white supporters drove removal.</li><li><b>◆ PROTECTIVE POLICY</b>: Robert Remini and Francis Paul Prucha argue that Jackson believed removal would save Native peoples from the states and from destruction.</li><li><b>● ABUSE OF POWER</b>: Alfred A. Cave argues that the Removal Act did not authorize force and that treaties were broken, so officials abused their power.</li></ul></div>
+<section class="case" id="case1" data-i="1"><div><span class="chip">1829</span><span class="cnum">Case file 1 of 4</span></div>
+<div class="who">Who: Jeremiah Evarts, a missionary leader who wrote as “William Penn”<br>From: Newspaper essay opposing removal</div>
+<p class="intro">A Boston missionary leader defends Native land rights in a series of essays.</p>
+<blockquote>The American Indians, now living upon lands derived from their ancestors, and never alienated nor surrendered, have a perfect right to the continued and undisturbed possession of these lands.&nbsp;.&nbsp;.&nbsp;. These rights of soil and of sovereignty are inherent in the Indians, till voluntarily surrendered by them; and cannot be taken away by compacts between communities of whites, to which compacts the Indians were not a party.&nbsp;.&nbsp;.&nbsp;.</blockquote>
+<div class="cite">William Penn [Jeremiah Evarts], “A Brief View of the Present Relations between the Government and People of the United States and the Indians within Our National Limits” (1829), as printed in the <i>Southern Galaxy</i> (Natchez, Miss.), January 7, 1830, p. 1; also in <i>In Time and Place</i>, from Theda Perdue and Michael D. Green, eds., <i>The Cherokee Removal: A Brief History with Documents</i> (1995). Ellipses mark Norton’s omissions; Perdue and Green (pp. 96–98) date the essay November 1829.</div>
+<div class="help"><b>Word help:</b> alienated = sold or given up · sovereignty = the right of a nation to govern itself · inherent = belonging by nature · compacts = agreements</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ HOSTILE POLICY<small>driven by racist hostility toward Native peoples</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ PROTECTIVE POLICY<small>an honest attempt to save Native people from the states</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● ABUSE OF POWER<small>broke treaties and went beyond the law</small></button></div>
+<label for="ctx1">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case2" data-i="2"><div><span class="chip">1830</span><span class="cnum">Case file 2 of 4</span></div>
+<div class="who">Who: Lewis Cass, governor of Michigan Territory (Jackson’s Secretary of War from 1831)<br>From: Article, “Removal of the Indians,” in a Boston review</div>
+<p class="intro">A governor who later joined Jackson’s cabinet explains in print why he thinks removal can be carried out kindly.</p>
+<blockquote>.&nbsp;.&nbsp;. in this transplantation from the soil of their ancestors to the plains of the Mississippi, some mental and corporeal sufferings await the emigrants. These are inseparable from the measure itself. But by an appropriation liberally made, and prudently applied, the journey may be rendered as easy for them, as for an equal number of our own people.&nbsp;.&nbsp;.&nbsp;. Let the whole subject be fully explained to the Indians. Let them know that the establishment of an independent government is a hopeless project .&nbsp;.&nbsp;.&nbsp;.</blockquote>
+<div class="cite">Lewis Cass, “Removal of the Indians,” <i>North American Review</i>, January 1830, National Humanities Center.</div>
+<div class="help"><b>Word help:</b> transplantation = moving to a new place · corporeal = of the body · emigrants = people who leave a country · appropriation = money set aside by law · inseparable = cannot be separated</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ HOSTILE POLICY<small>driven by racist hostility toward Native peoples</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ PROTECTIVE POLICY<small>an honest attempt to save Native people from the states</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● ABUSE OF POWER<small>broke treaties and went beyond the law</small></button></div>
+<label for="ctx2">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case3" data-i="3"><div><span class="chip">1830</span><span class="cnum">Case file 3 of 4</span></div>
+<div class="who">Who: The General Council of the Cherokee Nation (its Principal Chief, John Ross, is credited as the main author)<br>From: Public address to the people of the United States</div>
+<p class="intro">In the summer after the law passes, the Cherokee government speaks to the American public.</p>
+<blockquote>We are not willing to remove; and if we could be brought to this extremity, it would be not by argument, not because our judgment was satisfied, not because our condition will be improved; but only because we cannot endure to be deprived of our national and individual rights and subjected to a process of intolerable oppression.&nbsp;.&nbsp;.&nbsp;. The treaties with us, and laws of the United States made in pursuance of treaties, guaranty our residence, and our privileges and secure us against intruders. Our only request is, that these treaties may be fulfilled, and these laws executed.</blockquote>
+<div class="cite">“Address of the Committee and Council of the Cherokee Nation in General Council Convened, to the People of the United States,” signed by Lewis Ross (president of the committee), Going Snake (speaker of the council), and other members; <i>Cherokee Phoenix</i>, July 24, 1830, p. 1 (transcription, Hunter Library, Western Carolina University); also Teaching American History, Ashbrook Center.</div>
+<div class="help"><b>Word help:</b> extremity = a desperate point · guaranty = guarantee · intruders = people who enter land without permission</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ HOSTILE POLICY<small>driven by racist hostility toward Native peoples</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ PROTECTIVE POLICY<small>an honest attempt to save Native people from the states</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● ABUSE OF POWER<small>broke treaties and went beyond the law</small></button></div>
+<label for="ctx3">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case4" data-i="4"><div><span class="chip">1830</span><span class="cnum">Case file 4 of 4</span></div>
+<div class="who">Who: President Andrew Jackson<br>From: Second annual message to Congress, December 6, 1830</div>
+<p class="intro">The president defends the Indian Removal Act to Congress.</p>
+<blockquote>It will place a dense and civilized population in large tracts of country now occupied by a few savage hunters.&nbsp;.&nbsp;.&nbsp;. It will separate the Indians from immediate contact with settlements of whites; free them from the power of the States; enable them to pursue happiness in their own way and under their own rude institutions .&nbsp;.&nbsp;.&nbsp;. Rightly considered, the policy of the General Government toward the red man is not only liberal, but generous. He is unwilling to submit to the laws of the States and mingle with their population. To save him from this alternative, or perhaps utter annihilation, the General Government kindly offers him a new home .&nbsp;.&nbsp;.&nbsp;.</blockquote>
+<div class="cite">Andrew Jackson, Second Annual Message to Congress, December 6, 1830, National Archives, Milestone Documents.</div>
+<div class="help"><b>Word help:</b> dense = crowded together · alternative = the other choice · annihilation = complete destruction · rude = simple, undeveloped (Jackson’s word)</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ HOSTILE POLICY<small>driven by racist hostility toward Native peoples</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ PROTECTIVE POLICY<small>an honest attempt to save Native people from the states</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● ABUSE OF POWER<small>broke treaties and went beyond the law</small></button></div>
+<label for="ctx4">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>Why did the United States force Native nations west of the Mississippi in the 1830s: because Andrew Jackson and white Americans were hostile to Native people, because Jackson sincerely tried to protect them, or because the government abused its power and broke its own treaties?</b></p></div>
+<div class="box"><p><b>Your essay question:</b> Why did the United States force Native nations west of the Mississippi in the 1830s: because Andrew Jackson and white Americans were hostile to Native people, because Jackson sincerely tried to protect them, or because the government abused its power and broke its own treaties? Take a position and defend it with the case files.</p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file (or a historian) someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> what your answer shows about why Indian removal happened and who was responsible for it.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains what the evidence shows about Jackson’s policy.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 2 · AN EXPANDING NATION | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+(function(){
+var PACKET="L5_Thinking_Like_a_Historian", STORE="c1001_l5_thinking_like_a_historian", COURSE="HIST C1001", NC=4, GROUPS=[[1, 2, 3, 4]], MULTI=false, RDG=["rdg"];
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  var r=[];RDG.forEach(function(id,k){if(!val(id))r.push(k+1)});
+  if(r.length)m.push('Background Reading check'+(RDG.length>1?(r.length>1?'s ':' ')+r.join(', '):''));
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(MULTI&&!val('debate'))m.push('the debate you will write about');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function tallyOf(list){var t={national:0,state:0,voice:0};list.forEach(function(i){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++});return t}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var all=[];for(var i=1;i<=NC;i++)all.push(i);
+  var byDebate={};GROUPS.forEach(function(g,k){byDebate['debate'+(k+1)]=tallyOf(g)});
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:tallyOf(all),tallyByDebate:byDebate};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){e.addEventListener((e.type==='checkbox'||e.tagName==='SELECT')?'change':'input',function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Revolutionary Was the American Revolution? · Thinking Like a Historian 2</title><style>
+:root{--p:#163A5F;--bg:#F4F1E8;--a:#2B5D86;--g:#A7463C;--hi:#E5A89E;--s:#A7463C;--v:#2E6B3E;--t:#13283F;--card:#fff;--line:#e6d6c2;--mut:#6b5450}
+@media (prefers-color-scheme: dark){:root{--bg:#1d1212;--card:#2a1b1b;--t:#f5e9dc;--line:#4a3333;--mut:#c9b3a8;--hi:#5a4524}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#163A5F;color:#F4F1E8;padding:30px 16px 24px;border-bottom:6px solid #A7463C}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E5A89E}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E5A89E}
+.flag{display:inline-block;margin-top:12px;background:#2B5D86;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.dh{background:var(--p);color:#fff;border-radius:10px;padding:12px 16px;margin:30px 0 10px}
+.dh .dn{font:700 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#E5A89E}
+.dh .dq{font-size:19px;font-weight:bold;margin-top:2px}
+.legend{font:14px/1.5 Arial,sans-serif;margin:8px 0 0}
+.legend div{margin:2px 0}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+.sep{border:0;border-top:2px solid var(--line);margin:22px 0}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#F4F1E8;color:#2b1616;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(229,168,158,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(229,168,158,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#163A5F;color:#E5A89E;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 2 · 1776–1786</div>
+<h1>A Revolution for Whom?</h1>
+<div class="sub">Revolution and the Meaning of Independence · Crack the Case</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>How did the Revolutionary War function as a civil war, an engine for political and social change, and a turning point whose promises of liberty reached some Americans but not others between 1776 and 1786?</b></p>
+<p style="margin:.3em 0">Your job: read the background, crack three case files from 1776 to 1778, then close the case with a one-page essay.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol>
+<li><b>Part 1:</b> Read the Background Reading and answer the one-sentence check.</li>
+<li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most:<ul><li><b>★ RADICAL</b>: the Revolution brought deep new rights, ideas, and governments</li><li><b>◆ LIMITED</b>: elites still ruled and many people stayed unfree</li><li><b>● A VOICE</b>: wants to be heard or to be free (has no power to decide)</li></ul></li>
+<li>Type who made the source, when, and one key fact from the Background Reading in the context box. Then copy the clue words that prove your choice and finish the sentence “The author wants…” or “This shows…”.</li>
+<li><b>Part 3:</b> Write your one-page essay and check the four boxes.</li>
+<li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Reading</h2>
+<div class="box"><div class="article"><h3>A Revolution for Whom?</h3><p>The Declaration of Independence, adopted in 1776, announced that “all men are created equal” and that governments get their power from the consent of the governed. Historians have argued ever since about how far those words changed American life. Gordon Wood is the best known voice for the “radical” view. In his account the war overturned monarchy and a society built on inherited rank, and it created a republic in which the people were the source of authority. Wood sums up his view by calling the Revolution the most radical and far-reaching event in American history.</p><p>Other historians see far less change. The men who called for independence were mostly the same elites who led the new states and, later, the nation. Slavery survived and grew in the South, women remained legally subordinate, and the peace treaty that ended the war in 1783 opened western lands to white settlement without regard for Native nations that had fought on both sides. A third group of historians shifts the focus to people usually left out of the story. Enslaved and free Black Americans, women, and Native Americans took part in the war, often on both sides, and many of them borrowed the language of natural rights to demand freedom, equality, or sovereignty for themselves.</p><p>Three kinds of evidence help sort this out. First, the new state governments. Pennsylvania adopted a constitution in September 1776 that gave the vote to nearly every free man who paid taxes. South Carolina’s 1778 constitution, written by a planter elite, limited voting to free white men who owned land or paid a substantial tax and required officeholders to own large amounts of property. Second, petitions and letters from people who were shut out. In January 1777 Prince Hall, a free Black man in Boston, joined with other enslaved men to ask the Massachusetts legislature to abolish slavery, arguing that the principles Americans used against Britain applied to them as well. In the spring of 1776 Abigail Adams, writing from her farm in Braintree, Massachusetts, urged her husband John, a delegate to the Continental Congress in Philadelphia, to “Remember the Ladies” in the new laws he expected Congress and the states to write, and he answered with a joke.</p><p>Remember too that the Revolution worked like a civil war within the colonies. Loyalists, Patriots, and the enslaved all made choices about whom to trust, and Black and Native Americans often sided with whoever seemed more likely to protect their freedom or land. As you read, ask whether each source shows a society being remade, a society holding on to its old order, or someone with no power trying to make the new nation keep its promises.</p></div>
+<label for="rdg">In one sentence, explain the difference between the “radical” view of the Revolution and the “limited” view.</label>
+<textarea id="rdg" data-id="rdg" rows="2"></textarea></div>
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 3 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<section class="case" id="case1" data-i="1" data-d="d1"><div><span class="chip">1776</span><span class="cnum">Case file 1 of 3</span></div>
+<div class="who">Who: Abigail Adams of Braintree, Massachusetts, and her husband John Adams, a delegate in Philadelphia<br>From: Two letters between husband and wife</div>
+<p class="intro">A woman who runs a family farm writes to her husband as Congress moves toward independence, and he answers.</p>
+<blockquote>Abigail, March 31, 1776: .&nbsp;.&nbsp;. I desire you would Remember the Ladies, and be more generous and favourable to them than your ancestors.&nbsp;.&nbsp;. . If perticuliar care and attention is not paid to the Laidies we are determined to foment a Rebelion, and will not hold ourselves bound by any Laws in which we have no voice, or Representation. John, April 14, 1776: As to your extraordinary Code of Laws, I cannot but laugh.&nbsp;.&nbsp;. . Depend upon it, We know better than to repeal our Masculine systems.</blockquote>
+<div class="cite">Abigail Adams to John Adams, March 31, 1776, and John Adams to Abigail Adams, April 14, 1776, <i>Adams Family Correspondence</i>, vol. 1, Massachusetts Historical Society (Adams Papers Digital Edition). Spelling is original. Passages are joined by ellipses; the sentence beginning “If perticuliar care” follows the one before it in the letter.</div>
+<div class="help"><b>Word help:</b> Code of Laws = a new set of laws · generous and favourable = fair and kind · ancestors = earlier generations of men · foment = stir up · Rebelion = rebellion · Representation = having someone speak for you in government</div>
+<div class="ask">Which side of the debate does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ RADICAL<small>the Revolution brought deep new rights, ideas, and governments</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMITED<small>elites still ruled and many people stayed unfree</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx1">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case2" data-i="2" data-d="d1"><div><span class="chip">1776–1778</span><span class="cnum">Case file 2 of 3</span></div>
+<div class="who">Who: The framers of the Pennsylvania (1776) and South Carolina (1778) state constitutions<br>From: Voting rules in two state constitutions</div>
+<p class="intro">Two new states write rules for who may vote, and the answers are not the same.</p>
+<blockquote>Pennsylvania, 1776: Every freemen of the full age of twenty-one Years, .&nbsp;.&nbsp;. and paid public taxes during that time, shall enjoy the right of an elector: Provided always, that sons of freeholders of the age of twenty-one years shall be intitled to vote although they have not paid taxes. South Carolina, 1778: The qualification of electors shall be that every free white man, and no other person, who acknowledges the being of a God, .&nbsp;.&nbsp;. and hath a freehold at least of fifty acres of land, or a town lot, .&nbsp;.&nbsp;. shall be deemed a person qualified to vote</blockquote>
+<div class="cite">Constitution of Pennsylvania, September 28, 1776, Frame of Government, Sect. 6, and Constitution of South Carolina, March 19, 1778, Art. XIII, Avalon Project, Yale Law School. Spelling is original; ellipses mark cuts within the South Carolina article.</div>
+<div class="help"><b>Word help:</b> freemen = free men with full rights · elector = voter · freeholders = men who own land · intitled = entitled · freehold = owned land · qualified = allowed</div>
+<div class="ask">Which side of the debate does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ RADICAL<small>the Revolution brought deep new rights, ideas, and governments</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMITED<small>elites still ruled and many people stayed unfree</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx2">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case3" data-i="3" data-d="d1"><div><span class="chip">1777</span><span class="cnum">Case file 3 of 3</span></div>
+<div class="who">Who: Prince Hall, a free Black man, and other enslaved Black men in Massachusetts<br>From: Petition to the state legislature, January 13, 1777</div>
+<p class="intro">Black men held in bondage in a state that is fighting for liberty ask its lawmakers to end slavery.</p>
+<blockquote>That your Petitioners apprehend that they have, in common with all other Men, a natural and unalienable right to that freedom, which the great Parent of the Universe hath bestowed equally on all Mankind .&nbsp;.&nbsp;. &amp; in defiance of all the tender feelings of humanity, brought hither to be sold like Beasts of Burthen, &amp; like them condemned to slavery for Life .&nbsp;.&nbsp;. every principle from which America has acted in the course of her unhappy difficulties with Great-Britain, pleads stronger than a thousand arguments in favor of your Petitioners</blockquote>
+<div class="cite">Petition of Prince Hall and others to the Massachusetts General Court, January 13, 1777, Massachusetts Archives Collection, vol. 212, in <i>Black Writers of the Founding Era</i> (Library of America), via Library of America, Story of the Week. Spelling is original; the ellipses mark cuts.</div>
+<div class="help"><b>Word help:</b> Petitioners = people who formally ask the government for action · unalienable = cannot be taken away · Parent of the Universe = God · Beasts of Burthen = work animals · pleads = argues</div>
+<div class="ask">Which side of the debate does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ RADICAL<small>the Revolution brought deep new rights, ideas, and governments</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ LIMITED<small>elites still ruled and many people stayed unfree</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● A VOICE<small>wants to be heard or to be free (has no power to decide)</small></button></div>
+<label for="ctx3">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>How did the Revolutionary War function as a civil war, an engine for political and social change, and a turning point whose promises of liberty reached some Americans but not others between 1776 and 1786?</b></p></div>
+<div class="box"><p><b>Your essay question:</b> How revolutionary was the American Revolution? Argue whether it brought a radical change in American society and government or whether it changed much less than its promises suggested, and defend your answer with the case files.</p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish).  Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> what your answer shows about the people and ideas of this period.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains what my answer shows about this period.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 1 · COLONIES REVOLUTION AND REPUBLIC | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+(function(){
+var PACKET="L2_Thinking_Like_a_Historian", STORE="c1001_l2_thinking_like_a_historian", COURSE="HIST C1001", NC=3, MULTI=false;
+var DEB={"d1": [1, 2, 3]}, RDG=["rdg"], DEBIDS=["d1"];
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  var r=[];RDG.forEach(function(id,k){if(!val(id))r.push(k+1)});
+  if(r.length)m.push(MULTI?('Background Reading check'+(r.length>1?'s ':' ')+r.join(', ')):'Background Reading check');
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(MULTI&&!val('debate'))m.push('the debate you chose for your essay');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function showQ(){
+  if(!MULTI)return;var v=val('debate');
+  document.querySelectorAll('.eq').forEach(function(p){p.hidden=(p.dataset.d!==v)});
+  $('eqnone').hidden=!!v;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  showQ();
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function tallyOf(list){var t={national:0,state:0,voice:0};list.forEach(function(i){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++});return t}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var all=[];for(var i=1;i<=NC;i++)all.push(i);
+  var db={};DEBIDS.forEach(function(d){db[d]=tallyOf(DEB[d])});
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:tallyOf(all),debates:db};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){var ev=(e.type==='checkbox'||e.tagName==='SELECT')?'change':'input';e.addEventListener(ev,function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

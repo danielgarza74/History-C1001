@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Who Gained? What Was the Aim? · Thinking Like a Historian 4</title><style>
+:root{--p:#7A2E1F;--bg:#FBF2E7;--a:#A8412B;--g:#D9A15C;--hi:#EAC896;--s:#8C5E1A;--v:#2E6B3E;--t:#3A1A12;--card:#fff;--line:#e6d6c2;--mut:#6b5450}
+@media (prefers-color-scheme: dark){:root{--bg:#1d1212;--card:#2a1b1b;--t:#f5e9dc;--line:#4a3333;--mut:#c9b3a8;--hi:#5a4524}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#7A2E1F;color:#FBF2E7;padding:30px 16px 24px;border-bottom:6px solid #D9A15C}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#EAC896}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#EAC896}
+.flag{display:inline-block;margin-top:12px;background:#A8412B;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#FBF2E7;color:#2b1616;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(234,200,150,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(234,200,150,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#7A2E1F;color:#EAC896;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+
+.grp{margin:34px 0 4px;padding:12px 16px;background:var(--p);color:#fff;border-radius:10px}
+.grp .gl{font:700 12px Arial,sans-serif;letter-spacing:.14em;color:var(--hi)}
+.grp h2{color:#fff;margin:4px 0 0;font-size:21px}
+.dq ul{margin:.4em 0;padding-left:1.2em}
+.dq li{margin:.35em 0;font:15px/1.5 Arial,sans-serif}
+.rd h3{margin-top:0}
+.essaysamp p{margin:.7em 0}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 4 · 1793–1854</div>
+<h1>Who Gained? What Was the Aim?</h1>
+<div class="sub">The Market Revolution and Sectional Change · Thinking Like a Historian</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Questions:</div><p style="margin:.4em 0;font-size:18px"><b>Debate 1:</b> Did the market revolution of the 1820s–1850s open new freedom and opportunity for ordinary Americans, or did it set workers and farmers against a powerful business class?</p><p style="margin:.4em 0;font-size:18px"><b>Debate 2:</b> Was the Monroe Doctrine meant to defend liberty and independence in the Americas, or to protect and expand the national interests of the United States?</p><p style="margin:.3em 0">Your job: read the background, crack 6 case files (the documents historians use as evidence), then close the case with a one-page essay on ONE of the debates.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol><li><b>Part 1:</b> Read the Background Readings and answer the one-sentence checks.</li><li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most. The three buttons change with each debate, so read them. Each has a symbol (★, ◆, ●) as well as a label.</li><li>Type who made the source, when, and the key fact (use the Background Reading). Then copy the clue words that prove your choice and finish the sentence “This source helps…”.</li><li><b>Part 3:</b> Choose ONE debate from the menu, then Write your one-page essay and check the four boxes.</li><li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Reading</h2>
+<div class="box rd"><div class="article"><div class="lab">Debate 1</div><h3>Canals, Cotton Mills, and the Question of Who Gained</h3><p>In the early republic most Americans lived on farms and grew much of what they ate. Thomas Jefferson hoped the country would stay a land of independent farmers, while Alexander Hamilton pictured a nation of cities, factories, and trade. After the War of 1812 cut off British goods and pushed Americans to make their own, a wave of new technology moved the country toward Hamilton’s picture. The Erie Canal, finished across New York in 1825, joined the Great Lakes to the Hudson River and New York City. Steamboats and railroads followed, and in 1844 the telegraph let news cross long distances in minutes. Farmers began growing crops to sell in faraway cities instead of only feeding their own families. Historians call this shift to an economy of buying and selling the market revolution.</p><p>New factories needed workers. In Lowell, Massachusetts, the textile mills hired young women from New England farms, who lived in company boardinghouses under strict rules and worked about twelve hours a day. They struck over wage cuts in the 1830s, and in 1845 they founded the Lowell Female Labor Reform Association and published pamphlets called Factory Tracts to describe their lives. At the same time, immigrants from Germany and Ireland arrived in large numbers to build canals and railroads, to work in factories, or to take jobs as servants. Anna Maria Klinger, a young woman from rural Württemberg, reached New York in 1849, went into service, soon married Franz Schano, and with him saved some money. Supporters of the new economy celebrated it loudly. In 1826 Hezekiah Niles, who edited a weekly newspaper in Baltimore called Niles’ Weekly Register, filled it with figures about canals, mills, and boom towns and argued that the nation should encourage manufacturing.</p><p>Historians disagree about what all this meant for freedom and democracy in the age of Andrew Jackson. In 1945 Arthur Schlesinger Jr. described the period as a class conflict in which farmers and workers fought wealthy eastern business interests. Critics, including Richard Hofstadter and, in 1957, Bray Hammond, answered that many of Jackson’s followers were themselves ambitious businessmen who wanted fewer limits on making money, so the era was about opportunity more than class war. A third group, led by Richard McCormick and Lee Benson, said voters cared less about class than about party loyalty, regional rivalries, ethnic background, and religion. Charles Sellers later gave the era its best-known label, the market revolution, and argued that market capitalism pulled independent farmers and craftworkers into a new dependence on wages and markets. Ask of each source: whose argument does this evidence help most?</p></div>
+<label for="rdg1">In one sentence, name one change in transportation or technology that built the market economy and one group of people whose lives it changed.</label>
+<textarea id="rdg1" data-id="rdg1" rows="2"></textarea></div>
+<div class="box rd"><div class="article"><div class="lab">Debate 2</div><h3>A Doctrine Written in Private</h3><p>By 1823 most of Spain’s colonies in the Americas had won their independence, and the United States had recognized several of the new republics. In Europe, meanwhile, the Holy Alliance of Austria, Prussia, and Russia, monarchies determined to stamp out revolution, backed a French army that marched into Spain in 1823 to restore its king. Americans feared that the same powers might help Spain take back its colonies. Russia was also claiming land on the Pacific coast of North America, and Great Britain, which had the strongest navy in the world, was watching every move.</p><p>In 1823 Britain’s foreign secretary, George Canning, suggested that Britain and the United States issue a joint warning against European intervention in Latin America. President James Monroe asked for advice from retired presidents Thomas Jefferson and James Madison and from his cabinet. Jefferson wrote to him on October 24, 1823, urging him to accept Britain’s friendship but to keep Europe out of the Americas. At a cabinet meeting on November 7, Secretary of War John C. Calhoun leaned toward a joint pledge, even if it meant promising not to take Cuba or Texas. Secretary of State John Quincy Adams, who kept a detailed diary, disagreed, because a pledge would tie the nation’s hands, and Monroe did not want the United States to seem like Britain’s junior partner. On December 2, 1823, Monroe sent Congress his annual message. It said that the American continents were closed to new European colonies, that the United States would see any European effort to extend its political system to the hemisphere as dangerous, and that the United States would stay out of Europe’s wars and leave existing colonies alone. The message later became known as the Monroe Doctrine. It was a statement of policy, not a law, and for decades it was British sea power that made the warning believable.</p><p>Historians still argue about Monroe’s purpose. Dexter Perkins, writing in the 1930s, saw a defense of republican government against the Holy Alliance. William Appleman Williams (1958) and Walter LaFeber (1993) stressed that Jefferson and Adams wanted the United States free to act on its own, without interference from Britain or anyone else; LaFeber called the Doctrine a public version of Jefferson’s private belief that America should have “a hemisphere to itself.” Mark Gilderhus (2006) added that, whatever Monroe intended, the Doctrine treated the United States as the “parent” or protector of the new nations, which placed it above them. The question for each source is whether it shows a defense of liberty and independence or a calculation of what the United States wanted.</p></div>
+<label for="rdg2">In one sentence, explain why Monroe’s government in 1823 worried about European powers in Latin America.</label>
+<textarea id="rdg2" data-id="rdg2" rows="2"></textarea></div>
+
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 6 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<div class="grp"><div class="gl">DEBATE 1 · CASE FILES 1–3</div><h2>The Market Revolution: Opportunity or Conflict?</h2></div>
+<div class="box dq"><div class="lab">The debate:</div><p style="margin:.3em 0"><b>Did the market revolution of the 1820s–1850s open new freedom and opportunity for ordinary Americans, or did it set workers and farmers against a powerful business class?</b></p><ul><li><b>★ OPPORTUNITY</b>: Bray Hammond and the “entrepreneurial” historians argue that the new economy rewarded ambition and gave many people chances to rise and be free.</li><li><b>◆ CLASS CONFLICT</b>: Arthur Schlesinger Jr. and Charles Sellers stress conflict: farmers and workers pushed back against a business elite.</li><li><b>● BOTH / MIXED</b>: A source whose evidence fits parts of both arguments (mixed), often from an ordinary person.</li></ul></div>
+<section class="case" id="case1" data-i="1"><div><span class="chip">1826</span><span class="cnum">Case file 1 of 6</span></div>
+<div class="who">Who: Hezekiah Niles, editor of <i>Niles’ Weekly Register</i> in Baltimore<br>From: Newspaper report, “Great National Interests”</div>
+<p class="intro">Two years after the Erie Canal opened, a Baltimore editor counts up what canals and factories have done.</p>
+<blockquote>On the contrary, they gave a large and wholesome circulation to money, and enriched many individuals; and the increased value of property, and of profit, resulting from them, must be supposed by counting up hundreds of millions of dollars .&nbsp;.&nbsp;.&nbsp;. The rise in the value of lands and lots on their borders .&nbsp;.&nbsp;. the new employment of tens of thousands of persons .&nbsp;.&nbsp;. make up an aggregate of benefits that the mind cannot grasp .&nbsp;.&nbsp;.&nbsp;. What then would be the state of our country, if our work-shops were in Europe? We should have, as it were, to live in caves and be clothed in skins.</blockquote>
+<div class="cite">Hezekiah Niles, “Great National Interests,” <i>Niles’ Weekly Register</i> (Baltimore), October 21, 1826, excerpted in National Humanities Center, Toolbox Library, <i>The Triumph of Nationalism</i>.</div>
+<div class="help"><b>Word help:</b> circulation = movement of money through the economy · aggregate = total · work-shops = small factories</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ OPPORTUNITY<small>the new economy opened ways to get ahead</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ CLASS CONFLICT<small>workers and owners were on opposite sides</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows both a chance to rise and a hard struggle</small></button></div>
+<label for="ctx1">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case2" data-i="2"><div><span class="chip">1845</span><span class="cnum">Case file 2 of 6</span></div>
+<div class="who">Who: The Lowell Female Labor Reform Association, mill workers in Lowell, Massachusetts<br>From: <i>Factory Tracts</i>, “Factory Life As It Is, by an Operative”</div>
+<p class="intro">Women who work in the Lowell mills describe a young worker’s day and call on others to organize.</p>
+<blockquote>It is not enough, that like the poor peasant of Ireland, or the Russian serf .&nbsp;.&nbsp;. she must still continue to toil on, long after Nature’s lamp has ceased to lend its aid .&nbsp;.&nbsp;. thus working on an average, at least twelve hours and three fourths per day, exclusive of the time allotted for her hasty meals .&nbsp;.&nbsp;.&nbsp;. in the strength of our united influence we will soon show these drivelling cotton lords, this mushroom aristocracy of New England .&nbsp;.&nbsp;. that our rights cannot be trampled upon with impunity.</blockquote>
+<div class="cite"><i>Factory Tracts. Factory Life As It Is, by an Operative</i> (Lowell, 1845), The Lost Museum / History Matters, CUNY and George Mason University.</div>
+<div class="help"><b>Word help:</b> serf = a peasant bound to the land and a lord · avarice = greed · drivelling = foolish and weak · aristocracy = a ruling class of the wealthy · with impunity = without punishment</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ OPPORTUNITY<small>the new economy opened ways to get ahead</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ CLASS CONFLICT<small>workers and owners were on opposite sides</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows both a chance to rise and a hard struggle</small></button></div>
+<label for="ctx2">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case3" data-i="3"><div><span class="chip">1850</span><span class="cnum">Case file 3 of 6</span></div>
+<div class="who">Who: Anna Maria Schano (née Klinger), a young German immigrant in New York City<br>From: Letter to her family in Württemberg, probably mid-1850</div>
+<p class="intro">A servant who arrived in New York a year earlier writes home to parents who are thinking of following her.</p>
+<blockquote>I’m certainly glad not to be over there, and only those who don’t want to work don’t like it here, since in America you have to work if you want to amount to anything, you mustn’t feel ashamed, that’s just how you amount to something .&nbsp;.&nbsp;. the only thing is the problem with the language. It’s not as easy to learn as you think, even now I don’t know much .&nbsp;.&nbsp;. things go slowly the first few years, you have to take care of yourself, since the motto in America is help yourself.</blockquote>
+<div class="cite">Anna Maria Schano (née Klinger), letter [New York, probably mid-1850], in “Letters from the United States (1850–53),” trans. Susan Carter, German History in Documents and Images, from Kamphoefner et al., eds., <i>News from the Land of Freedom</i> (Cornell University Press, 1991).</div>
+<div class="help"><b>Word help:</b> amount to anything = succeed · ashamed = embarrassed by hard or humble work · motto = a short saying that guides behavior</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ OPPORTUNITY<small>the new economy opened ways to get ahead</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ CLASS CONFLICT<small>workers and owners were on opposite sides</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows both a chance to rise and a hard struggle</small></button></div>
+<label for="ctx3">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<div class="grp"><div class="gl">DEBATE 2 · CASE FILES 4–6</div><h2>The Monroe Doctrine: Principle or Self-Interest?</h2></div>
+<div class="box dq"><div class="lab">The debate:</div><p style="margin:.3em 0"><b>Was the Monroe Doctrine meant to defend liberty and independence in the Americas, or to protect and expand the national interests of the United States?</b></p><ul><li><b>★ PRINCIPLE</b>: Dexter Perkins argued that Monroe meant to protect republican governments and the new nations’ independence from the Holy Alliance of Europe’s monarchies.</li><li><b>◆ SELF-INTEREST</b>: William Appleman Williams and Walter LaFeber argued that it claimed “a hemisphere to itself” so the United States could act freely; Mark Gilderhus added that it cast the United States as “parent” to the new nations.</li><li><b>● BOTH / MIXED</b>: A source that fits both arguments: it speaks of freedom and also of what the United States wanted.</li></ul></div>
+<section class="case" id="case4" data-i="4"><div><span class="chip">1823</span><span class="cnum">Case file 4 of 6</span></div>
+<div class="who">Who: Thomas Jefferson, former president, at Monticello<br>From: Private letter to President James Monroe, October 24, 1823</div>
+<p class="intro">Retired in Virginia, Jefferson answers Monroe’s request for advice about Britain’s offer.</p>
+<blockquote>our first and fundamental maxim should be, never to entangle ourselves in the broils of Europe; our 2d never to suffer Europe to intermeddle in Cis-Atlantic affairs. America, North &amp; South, has a set of interests distinct from those of Europe, and peculiarly her own. she should therefore have a system of her own, separate and apart from that of Europe. while the last is laboring to become the domicil of despotism, our endeavor should surely be to make our hemisphere that of freedom.&nbsp;.&nbsp;.&nbsp;. I candidly confess that I have ever looked on Cuba as the most interesting addition which could ever be made to our system of states.</blockquote>
+<div class="cite">Thomas Jefferson to James Monroe, October 24, 1823, Founders Online, National Archives, from <i>The Papers of Thomas Jefferson, Retirement Series</i>, vol. 20 (Princeton University Press). Jefferson’s lowercase sentence openings, “2d,” and spelling are original.</div>
+<div class="help"><b>Word help:</b> broils = quarrels and fights · intermeddle = interfere · Cis-Atlantic = on this side of the Atlantic · domicil = home · despotism = rule by a tyrant</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ PRINCIPLE<small>defends liberty and independence in the Americas</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SELF-INTEREST<small>serves U.S. power, safety, and growth</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>mixes freedom talk with U.S. gain</small></button></div>
+<label for="ctx4">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case5" data-i="5"><div><span class="chip">1823</span><span class="cnum">Case file 5 of 6</span></div>
+<div class="who">Who: John Quincy Adams, Secretary of State<br>From: Diary entry on a cabinet meeting, November 7, 1823</div>
+<p class="intro">Adams records what the cabinet said about Britain’s offer of a joint declaration.</p>
+<blockquote>The object of Canning appears to have been to obtain some public pledge from the Government of the United States, ostensibly against the forcible interference of the Holy Alliance between Spain and South-America; but really or especially against the acquisition to the United States themselves of any part of the Spanish American Possessions&mdash;&nbsp;.&nbsp;.&nbsp;. I thought the cases not parallel&mdash;We have no intention of seizing either Texas or Cuba&mdash;But the inhabitants of either or both may exercise their primitive rights, and solicit an Union with us&mdash;&nbsp;.&nbsp;.&nbsp;.</blockquote>
+<div class="cite">John Quincy Adams, diary entry, November 7, 1823, vol. 34, p. 149, <i>John Quincy Adams Digital Diary</i>, Massachusetts Historical Society. Spelling and dashes are the diary&rsquo;s.</div>
+<div class="help"><b>Word help:</b> ostensibly = on the surface · forcible = by force · acquisition = gaining ownership · not parallel = not the same · primitive rights = natural rights</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 5"><button type="button" class="st" data-v="N" aria-pressed="false">★ PRINCIPLE<small>defends liberty and independence in the Americas</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SELF-INTEREST<small>serves U.S. power, safety, and growth</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>mixes freedom talk with U.S. gain</small></button></div>
+<label for="ctx5">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx5" data-id="ctx5" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note5">Clue words</label>
+<textarea id="note5" data-id="note5" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+<section class="case" id="case6" data-i="6"><div><span class="chip">1823</span><span class="cnum">Case file 6 of 6</span></div>
+<div class="who">Who: President James Monroe<br>From: Seventh annual message to Congress, December 2, 1823</div>
+<p class="intro">The president tells Congress and the world what the United States will and will not accept in the Americas.</p>
+<blockquote>We owe it, therefore, to candor .&nbsp;.&nbsp;. to declare that we should consider any attempt on their part to extend their system to any portion of this hemisphere as dangerous to our peace and safety.&nbsp;.&nbsp;.&nbsp;. [W]ith the Governments who have declared their independence and maintained it, and whose independence we have, on great consideration and on just principles, acknowledged, we could not view any interposition for the purpose of oppressing them, or controlling in any other manner their destiny, by any European power in any other light than as the manifestation of an unfriendly disposition toward the United States.</blockquote>
+<div class="cite">James Monroe, Seventh Annual Message to Congress, December 2, 1823, Miller Center (University of Virginia); text also checked against J. D. Richardson, ed., <i>A Compilation of the Messages and Papers of the Presidents</i>, vol. 2. The excerpt reads “maintained it,” as in Richardson, the Miller Center, and Norton; the Avalon Project (Yale) transcription prints “maintain it.”</div>
+<div class="help"><b>Word help:</b> candor = honesty · interposition = stepping in to interfere · manifestation = clear sign</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 6"><button type="button" class="st" data-v="N" aria-pressed="false">★ PRINCIPLE<small>defends liberty and independence in the Americas</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SELF-INTEREST<small>serves U.S. power, safety, and growth</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>mixes freedom talk with U.S. gain</small></button></div>
+<label for="ctx6">Context: who made this, when, and what key fact explains it? Use the Background Reading.</label>
+<textarea id="ctx6" data-id="ctx6" rows="2" placeholder="Who · when · one key fact from the Background Reading"></textarea>
+<label for="note6">Clue words</label>
+<textarea id="note6" data-id="note6" rows="2" placeholder="“clue words” — This source helps… because…"></textarea>
+</section>
+
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Questions:</div><p style="margin:.3em 0"><b>Debate 1: Did the market revolution of the 1820s–1850s open new freedom and opportunity for ordinary Americans, or did it set workers and farmers against a powerful business class?</b></p><p style="margin:.3em 0"><b>Debate 2: Was the Monroe Doctrine meant to defend liberty and independence in the Americas, or to protect and expand the national interests of the United States?</b></p></div>
+<div class="box"><p><b>Your essay question:</b> Choose one debate above and answer its question. Take a position and defend it with the case files from that debate.</p>
+<label for="debate">Which debate will you write about?</label>
+<select id="debate" data-id="debate"><option value="">Choose a debate…</option><option value="1">Debate 1 · The Market Revolution: Opportunity or Conflict?</option><option value="2">Debate 2 · The Monroe Doctrine: Principle or Self-Interest?</option></select>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file (or a historian) someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> what your answer shows about the historians’ debate you chose, and how the evidence helps decide it.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files from your chosen debate.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains what the evidence shows about the historians’ debate.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 2 · AN EXPANDING NATION | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+(function(){
+var PACKET="L4_Thinking_Like_a_Historian", STORE="c1001_l4_thinking_like_a_historian", COURSE="HIST C1001", NC=6, GROUPS=[[1, 2, 3], [4, 5, 6]], MULTI=true, RDG=["rdg1", "rdg2"];
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  var r=[];RDG.forEach(function(id,k){if(!val(id))r.push(k+1)});
+  if(r.length)m.push('Background Reading check'+(RDG.length>1?(r.length>1?'s ':' ')+r.join(', '):''));
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(MULTI&&!val('debate'))m.push('the debate you will write about');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function tallyOf(list){var t={national:0,state:0,voice:0};list.forEach(function(i){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++});return t}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var all=[];for(var i=1;i<=NC;i++)all.push(i);
+  var byDebate={};GROUPS.forEach(function(g,k){byDebate['debate'+(k+1)]=tallyOf(g)});
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:tallyOf(all),tallyByDebate:byDebate};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){e.addEventListener((e.type==='checkbox'||e.tagName==='SELECT')?'change':'input',function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

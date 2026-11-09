@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Did Texas Revolt? · Thinking Like a Historian 7</title><style>
+
+:root{--p:#1D3557;--bg:#EDF2F7;--a:#3B6C8C;--g:#A33A3A;--hi:#E8A6A6;--s:#A33A3A;--v:#2E6B3E;--t:#101D30;--card:#fff;--line:#DBDFE4;--mut:#172A46}
+@media (prefers-color-scheme: dark){:root{--bg:#0C1523;--card:#112034;--t:#EDF2F7;--line:#384D6B;--mut:#A4B0BF;--hi:#5D4242}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#1D3557;color:#EDF2F7;padding:30px 16px 24px;border-bottom:6px solid #A33A3A}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E8A6A6}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E8A6A6}
+.flag{display:inline-block;margin-top:12px;background:#3B6C8C;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#EDF2F7;color:#101D30;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(232,166,166,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(232,166,166,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#1D3557;color:#E8A6A6;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 7 · 1830–1861</div>
+<h1>Why Did Texas Revolt?</h1>
+<div class="sub">Expansion Slavery and the Road to Disunion · Remembering the Alamo · Crack the Case</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>Was the Texas Revolution a fight to defend liberty, or was it driven by slavery, land, and American settlement?</b></p>
+<p style="margin:.3em 0">Your job: read the background, examine four primary sources that historians use in this debate, then close the case with a one-page essay.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol>
+<li><b>Part 1:</b> Read the Background Reading and answer the one-sentence check.</li>
+<li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most:<ul><li><b>★ LIBERTY</b>: Texans fought to defend their constitutional rights against Mexican tyranny (the older view).</li><li><b>◆ SLAVERY &amp; LAND</b>: Slavery, land, and American settlement pushed Texas to revolt (the newer view).</li><li><b>● BOTH / MIXED</b>: Helps both sides, or does not fit either one cleanly.</li></ul></li>
+<li>Type who made the source, when, and one key fact from the Background Reading, then copy the clue words that prove your choice and finish the sentence “This helps ___ because…”.</li>
+<li><b>Part 3:</b> Write your one-page essay and check the four boxes.</li>
+<li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Reading</h2>
+<div class="box"><div class="article"><h3>Liberty, Land, and Slavery in Texas</h3><p>In 1821 Mexico won its independence from Spain and inherited Texas, a huge, thinly settled northern province. Mexican leaders wanted more settlers there, partly to hold off Comanche raids and partly to build up the economy, so they offered cheap land to newcomers who promised to obey Mexican law. Thousands of Americans accepted. Stephen F. Austin, who led the first colony in the early 1820s, became the most famous of the contractors, called empresarios, who recruited families. Most settlers came from the southern states, and many brought enslaved people with them. Texas was also joined to Coahuila as a single Mexican state, with a capital hundreds of miles away, and settlers often felt outvoted and badly served by distant courts.</p><p>Mexican officials began to worry. In 1828 General Manuel de Mier y Terán, a Mexican army officer, toured East Texas and reported on what he saw. He warned that Mexican influence faded the farther one traveled toward Nacogdoches, and that Americans were pressing to keep slavery in a country that was moving against it. Mexico moved to end slavery in 1829, and in 1830 it tried to stop new immigration from the United States. Neither effort worked well, and Anglo-American settlers kept coming.</p><p>The crisis came in the mid-1830s, when President Antonio López de Santa Anna threw out Mexico’s federal Constitution of 1824 and built a much stronger central government. Austin, who had spent months in a Mexican jail after pressing for a separate Texas state, came home in the fall of 1835 and war began that October. On March 2, 1836, delegates meeting at Washington, Texas, declared independence. Four days later the Mexican army stormed the Alamo mission in San Antonio and killed nearly all of its defenders. On April 21 Sam Houston’s army defeated Santa Anna at San Jacinto, and Texas became an independent republic. Its new constitution protected slavery, and its leaders hoped the United States would annex it. Annexation finally came in 1845 and helped lead to the Mexican-American War.</p><p>Historians disagree about why Texans rebelled. In the early twentieth century, scholars such as Eugene Barker told the story as a heroic defense of liberty: freedom-loving settlers resisting a tyrant. T. R. Fehrenbach’s 1968 book <i>Lone Star</i> kept that heroic story popular. More recent historians, among them Gregg Cantrell, Randolph Campbell, and Sam Haynes, point instead to several causes working together: Anglo-American immigration, economic and land interests, and the role of slavery. They also remind readers that Tejanos, the Mexican-born residents of Texas, had a stake in the fight and were not all on one side.</p><p>Even at the time, people disagreed. Benjamin Lundy, an antislavery newspaper editor who had traveled in Texas, argued in 1836 that the revolt was a scheme by slaveholders to take Texas from Mexico. He was an eyewitness, but he was also a committed opponent of slavery, and a good historian reads every source with that in mind. As you work, ask which interpretation each document helps most, and remember that some help both.</p></div>
+<label for="rdg">In one sentence, name one reason Texans gave for revolting and one reason historians connect to slavery or land.</label>
+<textarea id="rdg" data-id="rdg" rows="2"></textarea></div>
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 4 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<section class="case" id="case1" data-i="1"><div><span class="chip">1828</span><span class="cnum">Case file 1 of 4</span></div>
+<div class="who">Who: General Manuel de Mier y Terán, Mexican army officer<br>From: Letter to President Guadalupe Victoria of Mexico</div>
+<p class="intro">A Mexican general reports to the president after traveling through the Texas settlements.</p>
+<blockquote>As one covers the distance from Béjar to this town, he will note that Mexican influence is proportionately diminished until on arriving in [Nacogdoches] he will see that it is almost nothing.&nbsp;.&nbsp;.&nbsp;. I am warning you to take timely measures. Texas could throw the whole nation into revolution.&nbsp;.&nbsp;.&nbsp;. The wealthy Americans of Louisiana and other western states are anxious to secure land in Texas for speculation, but they are restrained by the laws prohibiting slavery.&nbsp;.&nbsp;.&nbsp;. The repeal of these laws is a point toward which the colonists are directing their efforts.</blockquote>
+<div class="cite">Manuel de Mier y Terán to President Guadalupe Victoria, Nacogdoches, June 30, 1828, English translation as printed in Alleine Howren, “Causes and Origin of the Decree of April 6, 1830,” <i>Southwestern Historical Quarterly</i> 16, no. 4 (April 1913): 378–422, at 395–97 (translator not named; Howren says the surviving transcript is unsigned but attributes it to Terán).</div>
+<div class="help"><b>Word help:</b> Béjar = San Antonio · proportionately diminished = shrinks step by step · speculation = buying land hoping to sell it for profit · repeal = cancel a law</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ LIBERTY<small>Texans fought to defend their constitutional rights against Mexican tyranny (the older view).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SLAVERY &amp; LAND<small>Slavery, land, and American settlement pushed Texas to revolt (the newer view).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx1">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section><section class="case" id="case2" data-i="2"><div><span class="chip">1835</span><span class="cnum">Case file 2 of 4</span></div>
+<div class="who">Who: Stephen F. Austin, leader of the first American colony in Texas<br>From: Letter to his cousin Mary Austin Holley</div>
+<p class="intro">Austin writes from New Orleans a few weeks before the fighting begins.</p>
+<blockquote>It is very evident that the best interests of the United States require that Texas should be effectually, and fully, Americanized—that is—settled by a population that will harmonize with their neighbors on the East, in language, political principles, common origin, sympathy, and even interest. Texas must be a slave country. It is no longer a matter of doubt. The interest of Louisiana requires that it should be, a population of fanatical abolitionists in Texas would have a very pernicious and dangerous influence on the overgrown slave population of that state.&nbsp;.&nbsp;.&nbsp;. A gentle breeze shakes off a ripe peach.</blockquote>
+<div class="cite">Stephen F. Austin to Mary Austin Holley, New Orleans, August 21, 1835, in <i>The Austin Papers</i>, ed. Eugene C. Barker, vol. 3 (Austin: University of Texas Press, 1927), 101–103; also in <i>Papers of the Texas Revolution</i>, vol. 1.</div>
+<div class="help"><b>Word help:</b> effectually = in effect · harmonize = fit in, get along · pernicious = harmful · abolitionists = people who wanted to end slavery</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ LIBERTY<small>Texans fought to defend their constitutional rights against Mexican tyranny (the older view).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SLAVERY &amp; LAND<small>Slavery, land, and American settlement pushed Texas to revolt (the newer view).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx2">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section><section class="case" id="case3" data-i="3"><div><span class="chip">1836</span><span class="cnum">Case file 3 of 4</span></div>
+<div class="who">Who: Delegates of the Convention of Texas<br>From: Texas Declaration of Independence</div>
+<p class="intro">Delegates explain to “an impartial world” why they are leaving Mexico.</p>
+<blockquote>The Mexican government, by its colonization laws, invited and induced the Anglo-American population of Texas to colonize its wilderness under the pledged faith of a written constitution, that they should continue to enjoy that constitutional liberty and republican government to which they had been habituated in the land of their birth, the United States of America. In this expectation they have been cruelly disappointed&nbsp;.&nbsp;.&nbsp;. General Antonio Lopez de Santa Anna, who having overturned the constitution of his country, now offers us the cruel alternative, either to abandon our homes&nbsp;.&nbsp;.&nbsp;. or submit to the most intolerable of all tyranny, the combined despotism of the sword and the priesthood.</blockquote>
+<div class="cite">“The Unanimous Declaration of Independence made by the Delegates of the People of Texas in General Convention at the town of Washington on the 2nd day of March 1836,” Avalon Project, Yale Law School.</div>
+<div class="help"><b>Word help:</b> colonization laws = laws that invited settlers · habituated = used to · acquiesced = went along with · despotism = harsh one-man rule · priesthood = the Catholic Church</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ LIBERTY<small>Texans fought to defend their constitutional rights against Mexican tyranny (the older view).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SLAVERY &amp; LAND<small>Slavery, land, and American settlement pushed Texas to revolt (the newer view).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx3">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section><section class="case" id="case4" data-i="4"><div><span class="chip">1836</span><span class="cnum">Case file 4 of 4</span></div>
+<div class="who">Who: Benjamin Lundy, antislavery newspaper editor<br>From: “The War in Texas,” antislavery pamphlet</div>
+<p class="intro">An editor who had traveled in Texas tells Northern readers what he thinks the war is really about.</p>
+<blockquote>They have been induced to believe that the inhabitants of Texas were engaged in a legitimate contest for the maintenance of the sacred principles of Liberty&nbsp;.&nbsp;.&nbsp;. whereas, the motives of its instigators&nbsp;.&nbsp;.&nbsp;. have been from the commencement, of a directly opposite character and tendency. It is susceptible of the clearest demonstration that the immediate cause and the leading object of this contest originated in a settled design, among the slaveholders of this country&nbsp;.&nbsp;.&nbsp;. to wrest the large and valuable territory of Texas from the Mexican Republic, in order to re-establish the SYSTEM OF SLAVERY; to open a vast and profitable SLAVE-MARKET therein; and, ultimately, to annex it to the United States.</blockquote>
+<div class="cite">Benjamin Lundy, <i>The War in Texas</i> (Philadelphia: Merrihew and Gunn, 1836), as reprinted in Thomas Earle, ed., <i>The Life, Travels and Opinions of Benjamin Lundy</i> (1847); text from the Sons of DeWitt Colony Texas website.</div>
+<div class="help"><b>Word help:</b> induced = led · legitimate = lawful, fair · instigators = people who stir up a conflict · wrest = pull away by force · annex = add to a country</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ LIBERTY<small>Texans fought to defend their constitutional rights against Mexican tyranny (the older view).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SLAVERY &amp; LAND<small>Slavery, land, and American settlement pushed Texas to revolt (the newer view).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx4">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section>
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>Was the Texas Revolution a fight to defend liberty, or was it driven by slavery, land, and American settlement?</b></p></div>
+<div class="box"><p><b>Your essay question:</b> Was the Texas Revolution mainly a struggle to defend liberty, or mainly a struggle driven by slavery, land, and American settlement? Take a position and defend it with the case files.</p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> name one way the Texas story helps explain the road to disunion.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains how Texas connects to the larger story of expansion, slavery, and disunion.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 3 · A HOUSE DIVIDED AND REBUILT | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+
+(function(){
+var PACKET="L7_Thinking_Like_a_Historian", STORE="c1001_l7_thinking_like_a_historian", COURSE="HIST C1001", NC=4;
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  if(!val('rdg'))m.push('Background Reading check');
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var t={national:0,state:0,voice:0};for(var i=1;i<=NC;i++){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++}
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:t};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){e.addEventListener(e.type==='checkbox'?'change':'input',function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

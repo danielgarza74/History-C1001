@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two Debates About the Founders · Thinking Like a Historian 3</title><style>
+:root{--p:#123F4A;--bg:#EEF4F2;--a:#276978;--g:#B9843E;--hi:#E2BE86;--s:#8A5E22;--v:#2E6B3E;--t:#10303A;--card:#fff;--line:#e6d6c2;--mut:#6b5450}
+@media (prefers-color-scheme: dark){:root{--bg:#1d1212;--card:#2a1b1b;--t:#f5e9dc;--line:#4a3333;--mut:#c9b3a8;--hi:#5a4524}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#123F4A;color:#EEF4F2;padding:30px 16px 24px;border-bottom:6px solid #B9843E}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E2BE86}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E2BE86}
+.flag{display:inline-block;margin-top:12px;background:#276978;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.dh{background:var(--p);color:#fff;border-radius:10px;padding:12px 16px;margin:30px 0 10px}
+.dh .dn{font:700 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#E2BE86}
+.dh .dq{font-size:19px;font-weight:bold;margin-top:2px}
+.legend{font:14px/1.5 Arial,sans-serif;margin:8px 0 0}
+.legend div{margin:2px 0}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+.sep{border:0;border-top:2px solid var(--line);margin:22px 0}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#EEF4F2;color:#2b1616;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(226,190,134,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(226,190,134,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#123F4A;color:#E2BE86;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 3 · 1781–1815</div>
+<h1>Fulfilled, Betrayed, or Contradicted?</h1>
+<div class="sub">Constitution and the Contested Early Republic · Crack the Case</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>What strengths and weaknesses led Americans to replace the Articles of Confederation with the Constitution of 1787, how did the ratification fight and the early republic’s conflicts test it, and how did the founding generation’s ideals about liberty collide with slavery?</b></p>
+<p style="margin:.3em 0">Your job: read two short backgrounds, crack seven case files from 1776 to 1820, then close the case with a one-page essay on one debate.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol>
+<li><b>Part 1:</b> Read the Background Readings and answer the one-sentence checks.</li>
+<li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most. Each debate has its own three buttons, so read the labels at the top of the debate.</li>
+<li>Type who made the source, when, and one key fact from the Background Reading in the context box. Then copy the clue words that prove your choice and finish the sentence “The author wants…” or “This shows…”.</li>
+<li><b>Part 3:</b> Choose <b>one</b> debate, write your one-page essay, and check the four boxes.</li>
+<li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Readings</h2>
+<div class="box"><div class="lab">Debate 1 · The Constitution</div><div class="article"><h3>Saving the Revolution or Taming It?</h3><p>By 1787 many American leaders believed the country was in trouble. The Articles of Confederation, the first national government, gave Congress almost no power to tax or to regulate trade, and the states often acted like separate countries. In the winter of 1786–1787 Daniel Shays and other farmers in western Massachusetts, crushed by debt and taxes, shut down courts in an armed protest known as Shays’s Rebellion. To many leaders it proved that the new republic needed a stronger government. Delegates met in Philadelphia in the summer of 1787, with James Madison as the leading thinker behind the Virginia Plan, and they wrote a Constitution built on federalism, separation of powers, and checks and balances.</p><p>The delegates also argued over how much power ordinary voters should have. On May 31, 1787, they debated whether the people should elect the first branch of the national legislature directly. Some, like Roger Sherman and Elbridge Gerry, feared that too much democracy had caused the troubles of the 1780s. Others, like George Mason, admitted the states had been too democratic but warned against an opposite extreme. The delegates voted six states to two, with two divided, for election by the people. The Constitution that resulted sent the Senate to be chosen by state legislatures and created an electoral college for choosing the president.</p><p>The Constitution then needed approval from nine states. Federalists such as Madison defended it in the <i>Federalist Papers</i>, a series of newspaper essays, and promised that states would keep a large share of power. Anti-Federalists feared a distant, consolidated government. Patrick Henry, a famous Revolutionary orator, told Virginia’s ratifying convention in June 1788 that the opening words “We, the people” meant a break from a union of states and a danger to liberty. Virginia ratified later that month, and a Bill of Rights was added in 1791.</p><p>Historians have long disagreed about what this all means. Nineteenth-century writers like George Bancroft and John Fiske saw the Constitution as the crowning achievement that rescued the nation from a “critical period.” In 1913 Charles Beard argued that wealthy men crafted it to protect their property from democratic pressures. Gordon Wood later argued that the framers wanted to save the Revolution’s republican ideals from democratic excess. The debate asks whether the Constitution completed the Revolution or reined it in.</p></div>
+<label for="rdg1">In one sentence, explain what Charles Beard argued about why the framers wrote the Constitution.</label>
+<textarea id="rdg1" data-id="rdg1" rows="2"></textarea></div>
+<div class="box"><div class="lab">Debate 2 · Thomas Jefferson and Slavery</div><div class="article"><h3>The Author of Liberty and the Master of Monticello</h3><p>Thomas Jefferson wrote the Declaration of Independence, served as governor of Virginia, minister to France in the 1780s, and president from 1801 to 1809. He was also a planter who owned more than 175 enslaved people when he wrote the Declaration and who held hundreds over his lifetime at Monticello. Historians now also accept that he fathered children with Sally Hemings, an enslaved woman at Monticello. How should a nation judge a hero who wrote that “all men are created equal” while he owned human beings?</p><p>Douglas Wilson argues that this way of asking the question reflects “presentism,” the habit of judging people of the past by present standards. In his reading, Jefferson was born into a slave society, concluded early that slavery was wrong, and wanted it ended. But the obstacles in Virginia were enormous. Freed people faced a hostile society, and a master who freed them might be sending them to hardship. Jefferson, Wilson says, never claimed that Black people were fit only for slavery and favored education, training, and a separate colony for the freed. For him Jefferson was caught on “the horns of a dilemma.”</p><p>Paul Finkelman argues that this test is not presentism at all. Jefferson led the American Enlightenment and wrote the Declaration, so the question is whether he rose above his region and economic interests, and Finkelman says he did not. Many of his friends freed their slaves, but Jefferson did little to end slavery, sold enslaved people when he was in debt, freed only five people in his will, and worried more about slavery’s effect on white society than about its victims. Finkelman also stresses Jefferson’s fear of racial mixture.</p><p>The evidence spans Jefferson’s public career. In 1776 he drafted a passage for the Declaration attacking the slave trade, which Congress cut. In the 1780s he wrote <i>Notes on the State of Virginia</i>, his only book, which discusses race and emancipation. In 1788, while serving as American minister in Paris, he declined to join a French antislavery society. And in 1820, during the Missouri crisis, when Congress was fighting over whether Missouri would enter as a slave state, he wrote that Americans had “the wolf by the ears.” Ask whether each source shows a man trapped by his time, a man who chose comfort over principle, or both.</p></div>
+<label for="rdg2">In one sentence, explain what Douglas Wilson means by “presentism” and why Paul Finkelman rejects that charge.</label>
+<textarea id="rdg2" data-id="rdg2" rows="2"></textarea></div>
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 7 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<div class="dh"><div class="dn">Debate 1 · The Constitution</div><div class="dq">Was the Constitution a fulfillment of the Revolution or a counterrevolution?</div></div>
+<div class="box" style="margin-top:0"><div class="lab">Your three buttons for this debate</div><div class="legend"><div><b>★ FULFILLMENT</b>: the Constitution saved and completed the Revolution’s goals</div><div><b>◆ COUNTERREVOLUTION</b>: it limited democracy and protected elite interests</div><div><b>● BOTH / MIXED</b>: the evidence fits both arguments or neither neatly</div></div></div>
+<section class="case" id="case1" data-i="1" data-d="d1"><div><span class="chip">1787</span><span class="cnum">Case file 1 of 7</span></div>
+<div class="who">Who: Delegates Roger Sherman, Elbridge Gerry, and George Mason, as recorded by James Madison<br>From: Madison’s notes of debate at the Constitutional Convention, May 31, 1787</div>
+<p class="intro">Delegates in Philadelphia argue over whether ordinary voters should choose members of the national legislature.</p>
+<blockquote>Mr. Sherman .&nbsp;.&nbsp;. The people he said, immediately should have as little to do as may be about the Government. &nbsp;.&nbsp;.&nbsp;. Mr. Gerry. The evils we experience flow from the excess of democracy. The people do not want virtue, but are the dupes of pretended patriots.&nbsp;.&nbsp;. . He had he said been too republican heretofore: he was still however republican, but had been taught by experience the danger of the levilling spirit. Mr. Mason .&nbsp;.&nbsp;. He admitted that we had been too democratic but was afraid we sd. incautiously run into the opposite extreme. We ought to attend to the rights of every class of the people.</blockquote>
+<div class="cite">James Madison, notes on the Federal Convention, May 31, 1787, in <i>Madison’s Notes of Debates</i>, Avalon Project, Yale Law School. Spelling and abbreviations are original; the names of speakers are given as the Avalon text prints them.</div>
+<div class="help"><b>Word help:</b> immediately = directly · dupes = people who are easily fooled · pretended patriots = false champions of the people · levilling = erasing differences in rank and wealth · sd. = should · incautiously = recklessly</div>
+<div class="ask">Which historians’ argument about the Constitution does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ FULFILLMENT<small>the Constitution saved and completed the Revolution’s goals</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ COUNTERREVOLUTION<small>it limited democracy and protected elite interests</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence fits both arguments or neither neatly</small></button></div>
+<label for="ctx1">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case2" data-i="2" data-d="d1"><div><span class="chip">1788</span><span class="cnum">Case file 2 of 7</span></div>
+<div class="who">Who: James Madison, writing as “Publius”<br>From: Newspaper essay defending the Constitution, January 1788</div>
+<p class="intro">A Virginian answers critics who say the new national government will swallow the states.</p>
+<blockquote>The Senate will be elected absolutely and exclusively by the State legislatures.&nbsp;.&nbsp;. . The powers delegated by the proposed Constitution to the federal government are few and defined. Those which are to remain in the State governments are numerous and indefinite. The former will be exercised principally on external objects, as war, peace, negotiation, and foreign commerce .&nbsp;.&nbsp;. The powers reserved to the several States will extend to all the objects which, in the ordinary course of affairs, concern the lives, liberties, and properties of the people, and the internal order, improvement, and prosperity of the State.</blockquote>
+<div class="cite">James Madison, <i>The Federalist</i> No. 45, 1788, Avalon Project, Yale Law School. Spelling and capitals are as printed there; the Norton exercise prints another edition with slight differences.</div>
+<div class="help"><b>Word help:</b> absolutely and exclusively = entirely and only · delegated = handed over · indefinite = not fixed or listed · external objects = matters outside the country, like war and trade</div>
+<div class="ask">Which historians’ argument about the Constitution does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ FULFILLMENT<small>the Constitution saved and completed the Revolution’s goals</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ COUNTERREVOLUTION<small>it limited democracy and protected elite interests</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence fits both arguments or neither neatly</small></button></div>
+<label for="ctx2">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case3" data-i="3" data-d="d1"><div><span class="chip">1788</span><span class="cnum">Case file 3 of 7</span></div>
+<div class="who">Who: Patrick Henry, an Anti-Federalist leader<br>From: Speech at the Virginia ratifying convention, June 5, 1788</div>
+<p class="intro">A famous Revolutionary orator tells Virginia’s delegates why they should not approve the Constitution.</p>
+<blockquote>Here is a resolution as radical as that which separated us from Great Britain. It is radical in this transition; our rights and privileges are endangered, and the sovereignty of the states will be relinquished .&nbsp;.&nbsp;. The rights of conscience, trial by jury, liberty of the press, all your immunities and franchises, all pretensions to human rights and privileges, are rendered insecure, if not lost, by this change .&nbsp;.&nbsp;. You are not to inquire how your trade may be increased, nor how you are to become a great and powerful people, but how your liberties can be secured; for liberty ought to be the direct end of your Government.</blockquote>
+<div class="cite">Patrick Henry, speech in the Virginia Ratifying Convention, June 5, 1788, in Jonathan Elliot, ed., <i>The Debates in the Several State Conventions</i>, as reproduced by the Dutch Association for American Studies. Elliot prints “resolution,” which is generally read as a misprint for “revolution.”</div>
+<div class="help"><b>Word help:</b> radical = going to the root, a complete change · transition = shift · sovereignty = supreme power · relinquished = given up · immunities and franchises = legal protections and rights · insecure = unprotected</div>
+<div class="ask">Which historians’ argument about the Constitution does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ FULFILLMENT<small>the Constitution saved and completed the Revolution’s goals</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ COUNTERREVOLUTION<small>it limited democracy and protected elite interests</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence fits both arguments or neither neatly</small></button></div>
+<label for="ctx3">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<div class="dh"><div class="dn">Debate 2 · Thomas Jefferson and Slavery</div><div class="dq">How should we judge Thomas Jefferson on slavery?</div></div>
+<div class="box" style="margin-top:0"><div class="lab">Your three buttons for this debate</div><div class="legend"><div><b>★ CONSTRAINED</b>: a man caught in his time who opposed slavery but could not end it</div><div><b>◆ FAILED</b>: a leader who knew better and protected his own comfort</div><div><b>● BOTH / MIXED</b>: the evidence supports both judgments at once</div></div></div>
+<section class="case" id="case4" data-i="4" data-d="d2"><div><span class="chip">1776</span><span class="cnum">Case file 4 of 7</span></div>
+<div class="who">Who: Thomas Jefferson, in his draft of the Declaration of Independence<br>From: Draft passage removed by Congress</div>
+<p class="intro">A Virginia planter writes a charge against the king that Congress will not keep in the Declaration.</p>
+<blockquote>[H]e has waged cruel war against human nature itself, violating it’s most sacred rights of life &amp; liberty in the persons of a distant people who never offended him, captivating &amp; carrying them into slavery in another hemisphere, or to incur miserable death in their transportation thither. this piratical warfare, the opprobrium of infidel powers, is the warfare of the Christian king of Great Britain. determined to keep open a market where MEN should be bought &amp; sold he has prostituted his negative for suppressing every legislative attempt to prohibit or to restrain this execrable commerce</blockquote>
+<div class="cite">Thomas Jefferson, “original Rough draught” of the Declaration of Independence, June 1776, in <i>The Papers of Thomas Jefferson</i> (Princeton University Library), as transcribed by Encyclopedia Virginia. Spelling and capitals are original (“it’s,” lower-case “this”). The Norton exercise prints a lightly edited version.</div>
+<div class="help"><b>Word help:</b> opprobrium = shame · infidel powers = non-Christian states · prostituted his negative = misused his veto · execrable = detestable · commerce = trade</div>
+<div class="ask">Which historian’s judgment of Jefferson does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ CONSTRAINED<small>a man caught in his time who opposed slavery but could not end it</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ FAILED<small>a leader who knew better and protected his own comfort</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence supports both judgments at once</small></button></div>
+<label for="ctx4">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case5" data-i="5" data-d="d2"><div><span class="chip">1785–1787</span><span class="cnum">Case file 5 of 7</span></div>
+<div class="who">Who: Thomas Jefferson, planter and former governor of Virginia<br>From: Book of essays, Queries XIV and XVIII</div>
+<p class="intro">A Virginian describes his state to European readers and explains why he thinks emancipation would not end the conflict between races.</p>
+<blockquote>Deep rooted prejudices entertained by the whites; ten thousand recollections, by the blacks, of the injuries they have sustained .&nbsp;.&nbsp;. will divide us into parties, and produce convulsions which will probably never end but in the extermination of the one or the other race.&nbsp;.&nbsp;. . I advance it therefore as a suspicion only, that the blacks, whether originally a distinct race, or made distinct by time and circumstances, are inferior to the whites in the endowments both of body and mind.&nbsp;.&nbsp;. . There must doubtless be an unhappy influence on the manners of our people produced by the existence of slavery among us.</blockquote>
+<div class="cite">Thomas Jefferson, <i>Notes on the State of Virginia</i>, Query XIV (via Encyclopedia Virginia, excerpt from the 1785 text) and Query XIV and XVIII (via Samford University transcription of the 1787 edition). Spelling and punctuation are as printed there.</div>
+<div class="help"><b>Word help:</b> prejudices = unfair opinions formed beforehand · convulsions = violent upheavals · extermination = destruction · suspicion = a guess, not a proof · endowments = natural abilities · manners = habits and behavior</div>
+<div class="ask">Which historian’s judgment of Jefferson does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 5"><button type="button" class="st" data-v="N" aria-pressed="false">★ CONSTRAINED<small>a man caught in his time who opposed slavery but could not end it</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ FAILED<small>a leader who knew better and protected his own comfort</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence supports both judgments at once</small></button></div>
+<label for="ctx5">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx5" data-id="ctx5" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note5">Clue words</label>
+<textarea id="note5" data-id="note5" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case6" data-i="6" data-d="d2"><div><span class="chip">1788</span><span class="cnum">Case file 6 of 7</span></div>
+<div class="who">Who: Thomas Jefferson, American minister in Paris, writing to Jacques-Pierre Brissot de Warville<br>From: Letter declining to join an antislavery society, February 11, 1788</div>
+<p class="intro">A French reformer invites the American minister to join a society against the slave trade.</p>
+<blockquote>You know that nobody wishes more ardently to see an abolition not only of the trade but of the condition of slavery: and certainly nobody will be more willing to encounter every sacrifice for that object.&nbsp;.&nbsp;. . I am here as a public servant; and those whom I serve having never yet been able to give their voice against this practice, it is decent for me to avoid too public a demonstration of my wishes to see it abolished. Without serving the cause here, it might render me less able to serve it beyond the water.</blockquote>
+<div class="cite">Thomas Jefferson to Brissot de Warville, February 11, 1788, <i>The Papers of Thomas Jefferson</i>, vol. 12, ed. Julian P. Boyd (Princeton University Press, 1955), 577–78, via the Monticello classroom reprint of the Founders Online transcription. Spelling (“honour”) is as printed there; the Norton exercise prints a lightly modernized version.</div>
+<div class="help"><b>Word help:</b> abolition = ending · ardently = eagerly · demonstration = public show · decent = proper</div>
+<div class="ask">Which historian’s judgment of Jefferson does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 6"><button type="button" class="st" data-v="N" aria-pressed="false">★ CONSTRAINED<small>a man caught in his time who opposed slavery but could not end it</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ FAILED<small>a leader who knew better and protected his own comfort</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence supports both judgments at once</small></button></div>
+<label for="ctx6">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx6" data-id="ctx6" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note6">Clue words</label>
+<textarea id="note6" data-id="note6" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case7" data-i="7" data-d="d2"><div><span class="chip">1820</span><span class="cnum">Case file 7 of 7</span></div>
+<div class="who">Who: Thomas Jefferson, retired president, writing to Congressman John Holmes of Maine<br>From: Letter about the Missouri question, April 22, 1820</div>
+<p class="intro">In his late seventies, Jefferson reacts to a national fight over whether slavery may spread into Missouri.</p>
+<blockquote>The cession of that kind of property, for so it is misnamed, is a bagatelle which would not cost me a second thought, if, in that way, a general emancipation and expatriation could be effected; and gradually, and with due sacrifices, I think it might be. But as it is, we have the wolf by the ears, and we can neither hold him, nor safely let him go. Justice is in one scale, and self-preservation in the other.</blockquote>
+<div class="cite">Thomas Jefferson to John Holmes, April 22, 1820, in <i>The Works of Thomas Jefferson</i>, ed. Paul Leicester Ford, Federal Edition, vol. 12 (New York: G. P. Putnam’s Sons, 1904–05), 158–60, via the Online Library of Liberty’s Founders’ Constitution (University of Chicago Press). Spelling is as printed there.</div>
+<div class="help"><b>Word help:</b> cession = giving up · bagatelle = a trifle · expatriation = sending people out of the country · due sacrifices = fair costs · self-preservation = protecting one’s own safety</div>
+<div class="ask">Which historian’s judgment of Jefferson does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 7"><button type="button" class="st" data-v="N" aria-pressed="false">★ CONSTRAINED<small>a man caught in his time who opposed slavery but could not end it</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ FAILED<small>a leader who knew better and protected his own comfort</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>the evidence supports both judgments at once</small></button></div>
+<label for="ctx7">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx7" data-id="ctx7" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note7">Clue words</label>
+<textarea id="note7" data-id="note7" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>What strengths and weaknesses led Americans to replace the Articles of Confederation with the Constitution of 1787, how did the ratification fight and the early republic’s conflicts test it, and how did the founding generation’s ideals about liberty collide with slavery?</b></p></div>
+<div class="box"><label for="debate">Which debate will you close?</label>
+<select id="debate" data-id="debate"><option value="">Choose one debate…</option><option value="d1">Debate 1 · The Constitution</option><option value="d2">Debate 2 · Thomas Jefferson and Slavery</option></select>
+<p class="eq" data-d="d1" hidden><b>Your essay question:</b> Was the Constitution a fulfillment of the American Revolution or a counterrevolution that held back its democratic promise? Argue your side with the case files from this debate.</p><p class="eq" data-d="d2" hidden><b>Your essay question:</b> How should historians judge Thomas Jefferson on slavery: as a man constrained by his time who opposed slavery but could not end it, or as a leader who failed to live up to his own ideals? Argue your side with the case files from this debate.</p><p id="eqnone"><i>Pick a debate to see your essay question.</i></p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use at least two case files <i>from the debate you chose</i>. Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file from your debate, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> what your answer shows about the people and ideas of this period.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files from my debate.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains what my answer shows about this period.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 1 · COLONIES REVOLUTION AND REPUBLIC | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+(function(){
+var PACKET="L3_Thinking_Like_a_Historian", STORE="c1001_l3_thinking_like_a_historian", COURSE="HIST C1001", NC=7, MULTI=true;
+var DEB={"d1": [1, 2, 3], "d2": [4, 5, 6, 7]}, RDG=["rdg1", "rdg2"], DEBIDS=["d1", "d2"];
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  var r=[];RDG.forEach(function(id,k){if(!val(id))r.push(k+1)});
+  if(r.length)m.push(MULTI?('Background Reading check'+(r.length>1?'s ':' ')+r.join(', ')):'Background Reading check');
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(MULTI&&!val('debate'))m.push('the debate you chose for your essay');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function showQ(){
+  if(!MULTI)return;var v=val('debate');
+  document.querySelectorAll('.eq').forEach(function(p){p.hidden=(p.dataset.d!==v)});
+  $('eqnone').hidden=!!v;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  showQ();
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function tallyOf(list){var t={national:0,state:0,voice:0};list.forEach(function(i){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++});return t}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var all=[];for(var i=1;i<=NC;i++)all.push(i);
+  var db={};DEBIDS.forEach(function(d){db[d]=tallyOf(DEB[d])});
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:tallyOf(all),debates:db};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){var ev=(e.type==='checkbox'||e.tagName==='SELECT')?'change':'input';e.addEventListener(ev,function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

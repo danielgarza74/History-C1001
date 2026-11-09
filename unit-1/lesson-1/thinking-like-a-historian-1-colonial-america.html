@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Three Debates, Three Sets of Evidence · Thinking Like a Historian 1</title><style>
+:root{--p:#0B2239;--bg:#F5F1E6;--a:#1E4661;--g:#B58A3C;--hi:#E2C981;--s:#8A6420;--v:#2E6B3E;--t:#0B2239;--card:#fff;--line:#e6d6c2;--mut:#6b5450}
+@media (prefers-color-scheme: dark){:root{--bg:#1d1212;--card:#2a1b1b;--t:#f5e9dc;--line:#4a3333;--mut:#c9b3a8;--hi:#5a4524}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#0B2239;color:#F5F1E6;padding:30px 16px 24px;border-bottom:6px solid #B58A3C}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E2C981}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E2C981}
+.flag{display:inline-block;margin-top:12px;background:#1E4661;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.dh{background:var(--p);color:#fff;border-radius:10px;padding:12px 16px;margin:30px 0 10px}
+.dh .dn{font:700 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#E2C981}
+.dh .dq{font-size:19px;font-weight:bold;margin-top:2px}
+.legend{font:14px/1.5 Arial,sans-serif;margin:8px 0 0}
+.legend div{margin:2px 0}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+.sep{border:0;border-top:2px solid var(--line);margin:22px 0}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#F5F1E6;color:#2b1616;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(226,201,129,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(226,201,129,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#0B2239;color:#E2C981;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 1 · 1603–1776</div>
+<h1>Witches, Servants, and Rebels</h1>
+<div class="sub">Colonial America and the Imperial Crisis · Crack the Case</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>How did Indigenous dispossession, coerced labor, and growing self-government shape England’s American colonies between 1603 and 1776—and why did imperial warfare and tighter British control turn so many colonists from loyal subjects into advocates of independence?</b></p>
+<p style="margin:.3em 0">Your job: read three short backgrounds, crack eight case files from 1640 to 1767, then close the case with a one-page essay on one debate.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol>
+<li><b>Part 1:</b> Read the Background Readings and answer the one-sentence checks.</li>
+<li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most. Each debate has its own three buttons, so read the labels at the top of the debate.</li>
+<li>Type who made the source, when, and one key fact from the Background Reading in the context box. Then copy the clue words that prove your choice and finish the sentence “The author wants…” or “This shows…”.</li>
+<li><b>Part 3:</b> Choose <b>one</b> debate, write your one-page essay, and check the four boxes.</li>
+<li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Readings</h2>
+<div class="box"><div class="lab">Debate 1 · Salem Witchcraft</div><div class="article"><h3>Fear, Spite, and the Salem Trials</h3><p>In the winter of 1692 several girls in Salem Village, Massachusetts, began to suffer violent fits, and a local doctor suggested that the cause might be supernatural. Under pressure, the girls named three women as witches: Tituba, an enslaved woman from Barbados, Sarah Osborne, and Sarah Good, a poor woman who begged for food and shelter. The magistrates John Hathorne and Jonathan Corwin questioned Good on March 1, 1692. Within a year more than 150 people had been arrested, and nineteen were hanged, including Good in July, before the governor closed the special court.</p><p>Belief in witchcraft was not strange in the seventeenth century. Puritan colonists believed that God and Satan were fighting a real war over New England, and ministers taught that the devil could work through human servants. Cotton Mather, a prominent Boston minister, defended the trials in <i>The Wonders of the Invisible World</i>, published in 1693. Court officials also accepted the girls’ claims that they saw the shapes of accused witches tormenting them, so an accusation could be hard to answer.</p><p>Historians have disagreed about what to make of this. Within a decade a critic named Robert Calef charged that the trials rested on fraud and that Mather’s book was propaganda. Many later scholars looked past the supernatural to social causes. Paul Boyer and Stephen Nissenbaum argued in 1974 that quarrels between Salem Village and wealthier Salem Town, and between neighbors, shaped who accused whom. Carol Karlsen showed that accused women were often older, outspoken, or in line to inherit property, so that the crisis was largely about women who stepped outside expected roles. Others, such as Chadwick Hansen in 1969, insisted that people truly believed in witchcraft, and some even practiced it, so that fear itself must be part of the story. Recent historians usually combine the explanations rather than choose one.</p><p>Sarah Good makes a good test case. She and her husband William had lost their property to the debts of her first husband, were homeless, and lived by renting rooms and asking neighbors for help. The couple stayed for a time with Samuel and Mary Abbey, who later turned them out. Good had a reputation for a sharp tongue, and she was hanged on July 19, 1692. As you read, ask whether each source shows people acting from sincere fear of witchcraft, from quarrels and prejudice, or from both at once.</p></div>
+<label for="rdg1">In one sentence, name one reason historians give for the Salem crisis other than real belief in witchcraft.</label>
+<textarea id="rdg1" data-id="rdg1" rows="2"></textarea></div>
+<div class="box"><div class="lab">Debate 2 · The Rise of Racial Slavery</div><div class="article"><h3>Bacon’s Rebellion and the Rise of Racial Slavery</h3><p>Virginia’s planters grew tobacco, a crop that demanded enormous amounts of land and labor. In the early decades most workers were English indentured servants, who agreed to labor for a set number of years in return for their passage. Africans had been present in the colony since 1619, but their legal status was not yet fixed. Black and white servants often worked side by side, sometimes ran away together, and were sometimes punished alike. By 1675 the English mainland colonies held only about 5,000 enslaved Africans. By the eve of the Revolution it had grown to roughly 500,000.</p><p>Historians have fought over how that change happened. In 1676 Nathaniel Bacon, a planter, led an armed rising against Governor William Berkeley. Bacon’s followers resented Berkeley’s Native American policy and the privileges of the governor’s circle, and they included poor farmers, indentured servants, and some enslaved Africans. The rebels burned Jamestown before Bacon died of illness and the revolt collapsed. Edmund Morgan and T. H. Breen argue that this multiracial uprising terrified the planter elite. Afterward, they say, leaders bought more enslaved Africans instead of servants and passed laws that separated Black and white people, giving poor whites rights and status so that they would side with planters, not with workers of African descent.</p><p>John Coombs disagrees. He argues that Virginia’s planters were already turning to slavery long before 1676, pulled by tobacco profits and by a growing Atlantic trade in people, and that neither the rebellion nor the later fall in the number of white servants had much to do with it. Kathleen Brown adds another lens: gender. When Virginia’s lawmakers decided in 1662 that a child’s status would follow the mother’s, they made enslaved women’s bodies the engine by which slavery reproduced itself. For her, the story of racial slavery cannot be told without women.</p><p>Several pieces of evidence matter here. In 1640 a Virginia court punished three runaway servants, two white and one Black. In 1676 the colony’s lawmakers, the House of Burgesses, wrote to the king to explain the rebellion. And across the century Virginia lawmakers passed a growing body of laws about enslaved people, including a harsh law in 1680 after the rebellion. Ask whether each source suggests that the rebellion was a turning point, that the turn had already happened, or that something else was at work.</p></div>
+<label for="rdg2">In one sentence, explain how Edmund Morgan and T. H. Breen connect Bacon’s Rebellion to racial slavery.</label>
+<textarea id="rdg2" data-id="rdg2" rows="2"></textarea></div>
+<div class="box"><div class="lab">Debate 3 · Origins of the Revolution</div><div class="article"><h3>Ideas or Hardship? Why the Colonists Rebelled</h3><p>After the French and Indian War ended in 1763, Britain was deeply in debt and decided that the colonies should help pay for the empire. Parliament passed the Sugar Act in 1764 and, in 1765, the Stamp Act, the first direct tax it had ever laid on the colonies. Colonial assemblies and the Stamp Act Congress answered that only their own legislatures could tax them. Crowds took to the streets as well. In Boston in August 1765 a mob destroyed the house of Andrew Oliver, the man appointed to collect the stamp tax, and later ransacked the home of Lieutenant Governor Thomas Hutchinson. Francis Bernard, the royal governor of Massachusetts, reported the riots to the Lords of Trade in London, the board that advised the Crown on colonial affairs.</p><p>Parliament repealed the Stamp Act in 1766 but kept looking for revenue. In 1767 the Townshend Acts taxed imports such as glass, paper, and tea. That same year Parliament suspended the New York Assembly for refusing to supply British troops as the Quartering Act required, and a Pennsylvania lawyer and landowner named John Dickinson answered with <i>Letters from a Farmer in Pennsylvania</i>, essays that were reprinted across the colonies.</p><p>Historians have long asked why so many colonists risked war. In 1967 Bernard Bailyn argued in <i>The Ideological Origins of the American Revolution</i> that the answer lies in ideas. After reading hundreds of pamphlets, he concluded that words like “slavery,” “corruption,” and “conspiracy” were not just propaganda. Colonists drew on British opposition thinkers and truly feared a plot by distant officials to destroy their liberty, and that fear lay at the heart of the Revolution. Gary Nash, writing in 1976, pushed back. He argued that studying only the pamphlets of merchants and lawyers overlooks the lives of ordinary city dwellers. In Boston, New York, and Philadelphia, rising poverty and growing gaps between rich and poor made artisans and laborers angry, and a popular ideology about wealth and power joined the elite arguments about constitutional rights.</p><p>Both historians agree that colonists were angry and that ideas mattered. They differ over where to look and over who was driving events. As you read the two letters, notice who is speaking, who the speaker is afraid of, and whether the writer is worried about the loss of liberty, about the crowd, or about both.</p></div>
+<label for="rdg3">In one sentence, state how Bailyn and Nash differ about what moved colonists toward revolution.</label>
+<textarea id="rdg3" data-id="rdg3" rows="2"></textarea></div>
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 8 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<div class="dh"><div class="dn">Debate 1 · Salem Witchcraft</div><div class="dq">What caused the Salem witchcraft crisis of 1692?</div></div>
+<div class="box" style="margin-top:0"><div class="lab">Your three buttons for this debate</div><div class="legend"><div><b>★ SINCERE BELIEF</b>: the fear of real witchcraft and the devil drove the trials</div><div><b>◆ OTHER CAUSES</b>: rivalry, spite, or prejudice drove the accusations</div><div><b>● BOTH / MIXED</b>: shows belief and personal conflict working together</div></div></div>
+<section class="case" id="case1" data-i="1" data-d="d1"><div><span class="chip">1692</span><span class="cnum">Case file 1 of 8</span></div>
+<div class="who">Who: Sarah Good, a poor woman accused of witchcraft, and magistrate John Hathorne<br>From: Court examination recorded by Ezekiel Cheever</div>
+<p class="intro">A shunned, homeless woman is questioned in Salem Village after children claim she is tormenting them.</p>
+<blockquote>(H) desired the children all of them to look upon her, and see, if this were the person that had hurt them and so they all did looke upon her and said this was one of the persons that did torment them presently they were all tormented. (H) Sarah good doe you not see now what you have done why doe you not tell us the truth, why doe you thus torment these poor children .&nbsp;.&nbsp;. he answered no not in this nature but it was her bad carriage to him and indeed said he I may say with tears that shee is an enimy to all good.</blockquote>
+<div class="cite">Examination of Sarah Good, March 1, 1692, recorded by Ezekiel Cheever, Salem Witchcraft Papers No. 63.2, Salem Witch Trials Documentary Archive, University of Virginia. “H” is Hathorne and “g” is Good. Spelling is original; scribal marks are omitted.</div>
+<div class="help"><b>Word help:</b> doe = do · looke = look · torment = hurt, make suffer · carriage = behavior · enimy = enemy · shee = she</div>
+<div class="ask">Which side of the Salem debate does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ SINCERE BELIEF<small>the fear of real witchcraft and the devil drove the trials</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OTHER CAUSES<small>rivalry, spite, or prejudice drove the accusations</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows belief and personal conflict working together</small></button></div>
+<label for="ctx1">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case2" data-i="2" data-d="d1"><div><span class="chip">1692</span><span class="cnum">Case file 2 of 8</span></div>
+<div class="who">Who: Samuel and Mary Abbey, Salem neighbors, testifying against Sarah Good<br>From: Sworn deposition, June 29, 1692</div>
+<p class="intro">Neighbors who once sheltered the Goods swear out a complaint months after the arrests.</p>
+<blockquote>That about this Time three Years past W&#x27;m: Good and his wife Sarah Good being destitute of an house to dwell in these Deponents out of Charity, they being Poor. lett them live in theirs some time, untill that the said Sarah Good was of so Turbulant a Spirritt, Spitefull and so Mallitiously bent, that these Deponents could not suffer her to Live in their howse any Longer .&nbsp;.&nbsp;. the winter following after the said Sarah was gone from our house, we began to Loose Cattle, and Lost severall after an unusall Manner, in drupeing Condition .&nbsp;.&nbsp;. and both doe beleive they Dyed by witchcraft</blockquote>
+<div class="cite">Deposition of Samuel Abbey and Mary Abbey v. Sarah Good, June 29, 1692, Salem Witchcraft Papers No. 63.13, Salem Witch Trials Documentary Archive, University of Virginia. Spelling is original; the transcription’s scribal insertion marks are omitted.</div>
+<div class="help"><b>Word help:</b> destitute = without money or shelter · Deponents = people giving sworn testimony · Turbulant = quarrelsome, stormy · Mallitiously = with spite · drupeing = drooping, sickly</div>
+<div class="ask">Which side of the Salem debate does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ SINCERE BELIEF<small>the fear of real witchcraft and the devil drove the trials</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OTHER CAUSES<small>rivalry, spite, or prejudice drove the accusations</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows belief and personal conflict working together</small></button></div>
+<label for="ctx2">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case3" data-i="3" data-d="d1"><div><span class="chip">1693</span><span class="cnum">Case file 3 of 8</span></div>
+<div class="who">Who: Cotton Mather, minister of Boston’s Second Church<br>From: Published book defending the trials</div>
+<p class="intro">A leading Boston minister explains to readers what he believes was happening in Massachusetts.</p>
+<blockquote>The New-Englanders are a People of God settled in those, which were once the Devil’s Territories; .&nbsp;.&nbsp;. An Army of Devils is horribly broke in upon the place which is the Center, and after a sort, the First-born of our English Settlements: and the Houses of the Good People there are fill’d with the doleful Shrieks of their Children and Servants, Tormented by Invisible Hands, with Tortures altogether preternatural.&nbsp;.&nbsp;. . Now, by these Confessions ’tis Agreed, That the Devil has made a dreadful Knot of Witches in the Country, and by the help of Witches has dreadfully increased that Knot</blockquote>
+<div class="cite">Cotton Mather, <i>The Wonders of the Invisible World</i> (Boston, 1693), Project Gutenberg ebook 28513. Spelling and capitals are as printed there; one ellipsis marks each cut. The Norton exercise prints a modernized version of this passage.</div>
+<div class="help"><b>Word help:</b> Territories = lands under his control · Center = the heart of the colony · preternatural = beyond nature · Confessions = statements by accused people · Knot = tightly linked group</div>
+<div class="ask">Which side of the Salem debate does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ SINCERE BELIEF<small>the fear of real witchcraft and the devil drove the trials</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OTHER CAUSES<small>rivalry, spite, or prejudice drove the accusations</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows belief and personal conflict working together</small></button></div>
+<label for="ctx3">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<div class="dh"><div class="dn">Debate 2 · The Rise of Racial Slavery</div><div class="dq">How did racial slavery take hold in Virginia?</div></div>
+<div class="box" style="margin-top:0"><div class="lab">Your three buttons for this debate</div><div class="legend"><div><b>★ THE REBELLION</b>: Bacon’s Rebellion in 1676 pushed planters toward race-based slavery</div><div><b>◆ ALREADY UNDERWAY</b>: tobacco profits had already built slavery before 1676</div><div><b>● BOTH / MIXED</b>: adds something neither side explains alone</div></div></div>
+<section class="case" id="case4" data-i="4" data-d="d2"><div><span class="chip">1640</span><span class="cnum">Case file 4 of 8</span></div>
+<div class="who">Who: The Council and General Court of colonial Virginia<br>From: Court order, July 9, 1640</div>
+<p class="intro">Virginia’s highest court decides what to do with three servants who ran away to Maryland and were caught.</p>
+<blockquote>Whereas Hugh Gwyn hath by order from this Board Brought back from Maryland three servants formerly run away from the said Gwyn, the court doth therefore order that the said three servants shall receive the punishment of whipping and to have thirty stripes apiece one called Victor, a Dutchman, the other a Scotchman called James Gregory, shall first serve out their times with their master according to their Indentures, and one whole year apiece after the time of their service is Expired .&nbsp;.&nbsp;. and that the third being a negro named John Punch shall serve his said master or his assigns for the time of his natural Life here or elsewhere.</blockquote>
+<div class="cite">General Court of Virginia, order of July 9, 1640, <i>Minutes of the Council and General Court of Colonial Virginia, 1622–1632, 1670–1676</i>, ed. H. R. McIlwaine (Richmond: Library of Virginia, 1924), 466–67, as transcribed by Encyclopedia Virginia. Spelling is original.</div>
+<div class="help"><b>Word help:</b> servants = indentured workers · stripes = lashes with a whip · Indentures = work contracts · assigns = anyone he sells the contract to · natural Life = until death</div>
+<div class="ask">Which historians’ argument about slavery does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ THE REBELLION<small>Bacon’s Rebellion in 1676 pushed planters toward race-based slavery</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ ALREADY UNDERWAY<small>tobacco profits had already built slavery before 1676</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>adds something neither side explains alone</small></button></div>
+<label for="ctx4">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case5" data-i="5" data-d="d2"><div><span class="chip">1676</span><span class="cnum">Case file 5 of 8</span></div>
+<div class="who">Who: The House of Burgesses, Virginia’s legislature, writing to the king<br>From: Official address to the Crown about “the late horrid rebellion”</div>
+<p class="intro">Virginia’s lawmakers, controlled by the colony’s ruling planters, explain to the king what happened and why.</p>
+<blockquote>The .&nbsp;.&nbsp;. giddy multitude not being therewith Content, and Nathaniel Bacon Junior, finding the multitude in such distempers, and being himselfe of a ruined fortune, ambitious and desiring Noveltyes .&nbsp;.&nbsp;. And being thus Abbetted and assisted, hee Insinuates into, and posseses the people with Lyberty and free estate from Bondage, and that he would make the meanest of them equall with or in better Condition then those that ruled over them .&nbsp;.&nbsp;. Confiscates theire estates, and distributes to his followers, Sett prissoners for debt and otherwise at Lyberty, and declares freedome to all servants, that belonged to any Loyall person</blockquote>
+<div class="cite">House of Burgesses of Virginia, address to the king, 1676, <i>Journals of the House of Burgesses of Virginia, 1659/60–1693</i>, ed. H. R. McIlwaine (Richmond: The Colonial Press, Everett Waddey Co., 1914). Checked against the 1914 volume; the opening “The” is capitalized as in Norton (the original reads “but the precipitate giddy multitude”); spelling is original.</div>
+<div class="help"><b>Word help:</b> giddy multitude = foolish, excitable crowd · Noveltyes = new, dangerous ideas · Abbetted = helped, encouraged · meanest = lowest in rank · Confiscates = seizes · Loyall = loyal to the governor and king</div>
+<div class="ask">Which historians’ argument about slavery does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 5"><button type="button" class="st" data-v="N" aria-pressed="false">★ THE REBELLION<small>Bacon’s Rebellion in 1676 pushed planters toward race-based slavery</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ ALREADY UNDERWAY<small>tobacco profits had already built slavery before 1676</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>adds something neither side explains alone</small></button></div>
+<label for="ctx5">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx5" data-id="ctx5" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note5">Clue words</label>
+<textarea id="note5" data-id="note5" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case6" data-i="6" data-d="d2"><div><span class="chip">1662–1680</span><span class="cnum">Case file 6 of 8</span></div>
+<div class="who">Who: The Virginia General Assembly (the colony’s lawmakers)<br>From: Two laws about enslaved people, passed before and after the rebellion</div>
+<p class="intro">Lawmakers write rules that define who is bound for life and how enslaved people may be controlled.</p>
+<blockquote>December 1662: WHEREAS some doubts have arrisen whether children got by any Englishman upon a negro woman should be slave or ffree, Be it therefore enacted and declared by this present grand assembly, that all children borne in this country shalbe held bond or free only according to the condition of the mother .&nbsp;.&nbsp;. June 1680: it shall not be lawfull for any negroe or other slave to carry or arme himselfe with any club, staffe, gunn, sword or any other weapon of defence or offence, nor to goe or depart from of his masters ground without a certificate from his master .&nbsp;.&nbsp;.</blockquote>
+<div class="cite">William Waller Hening, ed., <i>The Statutes at Large; Being a Collection of All the Laws of Virginia</i> (New York: R. &amp; W. &amp; G. Bartow, 1823), vol. 2, p. 170 (December 1662) and p. 481 (June 1680). Spelling is original; the 1662 and 1680 acts are quoted from the Encyclopedia Virginia and Cal State Long Beach transcriptions.</div>
+<div class="help"><b>Word help:</b> got by = fathered by · ffree = free · bond = enslaved · enacted = passed as law · certificate = written pass · defence or offence = for protection or attack</div>
+<div class="ask">Which historians’ argument about slavery does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 6"><button type="button" class="st" data-v="N" aria-pressed="false">★ THE REBELLION<small>Bacon’s Rebellion in 1676 pushed planters toward race-based slavery</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ ALREADY UNDERWAY<small>tobacco profits had already built slavery before 1676</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>adds something neither side explains alone</small></button></div>
+<label for="ctx6">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx6" data-id="ctx6" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note6">Clue words</label>
+<textarea id="note6" data-id="note6" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<div class="dh"><div class="dn">Debate 3 · Origins of the Revolution</div><div class="dq">What brought on the American Revolution?</div></div>
+<div class="box" style="margin-top:0"><div class="lab">Your three buttons for this debate</div><div class="legend"><div><b>★ IDEAS</b>: fear of tyranny and a defense of liberty drove colonists</div><div><b>◆ SOCIAL TENSION</b>: hardship and class conflict among ordinary people drove them</div><div><b>● BOTH / MIXED</b>: shows ideas and social tension mixed together</div></div></div>
+<section class="case" id="case7" data-i="7" data-d="d3"><div><span class="chip">1765</span><span class="cnum">Case file 7 of 8</span></div>
+<div class="who">Who: Francis Bernard, royal governor of Massachusetts<br>From: Letter to the Lords of Trade in London, August 31, 1765</div>
+<p class="intro">A royal governor reports to London after crowds in Boston attack the homes of Stamp Act officials.</p>
+<blockquote>[T]he mob, both great and small, became highly elated, and all kinds of ill-humours were set on foot; every thing that, for years past, had been the cause of any unpopular discontent, was revived; and private resentments against persons in office worked themselves in, and endeavoured to exert themselves under the mask of the public cause.&nbsp;.&nbsp;. . It was now becoming a war of plunder, of general levelling, and taking away the distinction of rich and poor .&nbsp;.&nbsp;. so that those gentlemen, who had promoted and approved the cruel treatment of Mr. Oliver, became now as fearful for themselves as the most loyal person in the town could be.</blockquote>
+<div class="cite">Francis Bernard to the Lords of Trade, August 31, 1765, in <i>The Parliamentary History of England</i>, vol. 16 (London, 1813), 126–28, as reproduced by NVCC Pressbooks, <i>U.S. History</i>. Spelling (“levelling”) is as printed there; the Norton exercise prints “leveling.”</div>
+<div class="help"><b>Word help:</b> ill-humours = bad tempers, grudges · avowed = admitted · private resentments = personal grudges · levelling = erasing differences in rank · Mr. Oliver = Andrew Oliver, the stamp tax collector</div>
+<div class="ask">Which historian’s argument about the Revolution does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 7"><button type="button" class="st" data-v="N" aria-pressed="false">★ IDEAS<small>fear of tyranny and a defense of liberty drove colonists</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SOCIAL TENSION<small>hardship and class conflict among ordinary people drove them</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows ideas and social tension mixed together</small></button></div>
+<label for="ctx7">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx7" data-id="ctx7" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note7">Clue words</label>
+<textarea id="note7" data-id="note7" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<section class="case" id="case8" data-i="8" data-d="d3"><div><span class="chip">1767</span><span class="cnum">Case file 8 of 8</span></div>
+<div class="who">Who: John Dickinson, writing as “A Farmer,” a Pennsylvania lawyer and landowner<br>From: Published essay, Letter I</div>
+<p class="intro">A well-read Pennsylvanian publishes an open letter after Parliament punishes New York’s assembly.</p>
+<blockquote>[I]t seems therefore to me as much a violation of the liberties of the people of that province, and consequently of all these colonies, as if the parliament had sent a number of regiments to be quartered upon them till they should comply.&nbsp;.&nbsp;. . for the cause of one is the cause of all. If the parliament may lawfully deprive New York of any of her rights, it may deprive any, or all the other colonies of their rights</blockquote>
+<div class="cite">John Dickinson, “Letter I,” <i>Letters from a Farmer in Pennsylvania</i> (1767–68), in <i>The Political Writings of John Dickinson, Esquire</i>, vol. 1 (Wilmington: Bonsal and Niles, 1801), via Milestone Documents. The Norton exercise prints another edition with small spelling and punctuation differences.</div>
+<div class="help"><b>Word help:</b> assertion = firm claim · legislature = lawmaking body · taxation = collecting taxes · regiments = army units · quartered = housed and fed · comply = obey</div>
+<div class="ask">Which historian’s argument about the Revolution does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 8"><button type="button" class="st" data-v="N" aria-pressed="false">★ IDEAS<small>fear of tyranny and a defense of liberty drove colonists</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ SOCIAL TENSION<small>hardship and class conflict among ordinary people drove them</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>shows ideas and social tension mixed together</small></button></div>
+<label for="ctx8">Context: who made this, when, and what key fact explains it? Use one fact from the Background Reading.</label>
+<textarea id="ctx8" data-id="ctx8" rows="2" placeholder="Who made it, when, and one fact from the Background Reading"></textarea>
+<label for="note8">Clue words</label>
+<textarea id="note8" data-id="note8" rows="2" placeholder="“clue words” — The author wants…"></textarea>
+</section>
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>How did Indigenous dispossession, coerced labor, and growing self-government shape England’s American colonies between 1603 and 1776—and why did imperial warfare and tighter British control turn so many colonists from loyal subjects into advocates of independence?</b></p></div>
+<div class="box"><label for="debate">Which debate will you close?</label>
+<select id="debate" data-id="debate"><option value="">Choose one debate…</option><option value="d1">Debate 1 · Salem Witchcraft</option><option value="d2">Debate 2 · The Rise of Racial Slavery</option><option value="d3">Debate 3 · Origins of the Revolution</option></select>
+<p class="eq" data-d="d1" hidden><b>Your essay question:</b> What caused the Salem witchcraft crisis of 1692: a sincere belief that witchcraft was real, or other causes such as rivalry, spite, and prejudice against certain people? Argue your side with the case files from this debate.</p><p class="eq" data-d="d2" hidden><b>Your essay question:</b> How did racial slavery take hold in Virginia: did Bacon’s Rebellion in 1676 turn planters toward it, or was it already underway because of profit and tobacco? Argue your side with the case files from this debate.</p><p class="eq" data-d="d3" hidden><b>Your essay question:</b> What brought on the American Revolution: ideas about liberty and fear of tyranny, or social and economic tension among ordinary colonists? Argue your side with the case files from this debate.</p><p id="eqnone"><i>Pick a debate to see your essay question.</i></p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use at least two case files <i>from the debate you chose</i>. Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file from your debate, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> what your answer shows about the people and ideas of this period.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files from my debate.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains what my answer shows about this period.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 1 · COLONIES REVOLUTION AND REPUBLIC | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+(function(){
+var PACKET="L1_Thinking_Like_a_Historian", STORE="c1001_l1_thinking_like_a_historian", COURSE="HIST C1001", NC=8, MULTI=true;
+var DEB={"d1": [1, 2, 3], "d2": [4, 5, 6], "d3": [7, 8]}, RDG=["rdg1", "rdg2", "rdg3"], DEBIDS=["d1", "d2", "d3"];
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  var r=[];RDG.forEach(function(id,k){if(!val(id))r.push(k+1)});
+  if(r.length)m.push(MULTI?('Background Reading check'+(r.length>1?'s ':' ')+r.join(', ')):'Background Reading check');
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(MULTI&&!val('debate'))m.push('the debate you chose for your essay');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function showQ(){
+  if(!MULTI)return;var v=val('debate');
+  document.querySelectorAll('.eq').forEach(function(p){p.hidden=(p.dataset.d!==v)});
+  $('eqnone').hidden=!!v;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  showQ();
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function tallyOf(list){var t={national:0,state:0,voice:0};list.forEach(function(i){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++});return t}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var all=[];for(var i=1;i<=NC;i++)all.push(i);
+  var db={};DEBIDS.forEach(function(d){db[d]=tallyOf(DEB[d])});
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:tallyOf(all),debates:db};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){var ev=(e.type==='checkbox'||e.tagName==='SELECT')?'change':'input';e.addEventListener(ev,function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>

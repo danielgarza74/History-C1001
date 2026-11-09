@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Failed or Overthrown? · Thinking Like a Historian 9</title><style>
+
+:root{--p:#283747;--bg:#F4F6F7;--a:#3E6E8E;--g:#B56A3A;--hi:#E3B98E;--s:#A05E34;--v:#2E6B3E;--t:#161E27;--card:#fff;--line:#DDDFE2;--mut:#202C39}
+@media (prefers-color-scheme: dark){:root{--bg:#10161C;--card:#18212B;--t:#F4F6F7;--line:#424F5D;--mut:#ADB3B9;--hi:#5B4A39}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.6 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+.hero{background:#283747;color:#F4F6F7;padding:30px 16px 24px;border-bottom:6px solid #B56A3A}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{font:700 13px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.18em;color:#E3B98E}
+.hero h1{margin:.35em 0 .2em;font-size:clamp(28px,5vw,40px);line-height:1.15}
+.hero .sub{font-style:italic;color:#E3B98E}
+.flag{display:inline-block;margin-top:12px;background:#3E6E8E;color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.08em;padding:6px 10px;border-radius:4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.cq{border-left:6px solid var(--a)}
+.lab{font:700 13px Arial,Helvetica,sans-serif;letter-spacing:.12em;color:var(--a);text-transform:uppercase}
+h2{font-size:24px;margin:28px 0 6px;color:var(--p)}
+@media (prefers-color-scheme: dark){h2,.lab{color:var(--t)}}
+h3{margin:.2em 0 .4em}
+.article p{margin:.7em 0}
+.article h3{font-size:21px}
+label{font:600 14px Arial,Helvetica,sans-serif;display:block;margin:12px 0 4px}
+input[type=text],textarea,select{width:100%;font:16px/1.5 Arial,Helvetica,sans-serif;padding:9px 10px;border:1.5px solid var(--line);border-radius:7px;background:#fffdf9;color:#222}
+textarea{min-height:80px;resize:vertical}
+.bad{border-color:#c0392b!important;background:#fdeceb!important}
+.names{display:grid;grid-template-columns:1fr 1fr 110px 150px;gap:10px}
+@media(max-width:620px){.names{grid-template-columns:1fr 1fr}}
+.meter{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--a);transition:width .3s}
+.mtext{font:600 14px Arial,sans-serif;margin-bottom:6px}
+.case{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--line);border-radius:10px;padding:16px 18px;margin:22px 0}
+.case.done{border-left-color:var(--p)} .case.isS{border-left-color:var(--s)} .case.isV{border-left-color:var(--v)}
+.chip{display:inline-block;background:var(--p);color:#fff;font:700 13px Arial,sans-serif;padding:3px 10px;border-radius:20px;margin-right:8px}
+.cnum{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.who{font:600 15px Arial,sans-serif;margin:.6em 0 .2em}
+.intro{margin:.3em 0}
+blockquote{margin:12px 0;padding:12px 16px;background:#F4F6F7;color:#161E27;border-left:5px solid var(--g);font-style:italic;border-radius:0 8px 8px 0}
+.cite{font:13px/1.45 Arial,sans-serif;color:var(--mut)}
+.help{font:14px/1.5 Arial,sans-serif;background:rgba(227,185,142,.25);padding:8px 10px;border-radius:6px;margin:8px 0}
+.ask{font:700 15px Arial,sans-serif;margin:14px 0 6px}
+.stances{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:620px){.stances{grid-template-columns:1fr}}
+.st{font:700 15px Arial,sans-serif;padding:10px;border-radius:8px;border:2px solid var(--p);background:#fff;color:var(--p);cursor:pointer;text-align:left}
+.st small{display:block;font-weight:400;font-size:12.5px;color:#444;margin-top:3px}
+.st[data-v=S]{border-color:var(--s);color:var(--s)} .st[data-v=V]{border-color:var(--v);color:var(--v)}
+.st[aria-pressed=true]{background:var(--p);color:#fff} .st[data-v=S][aria-pressed=true]{background:var(--s)} .st[data-v=V][aria-pressed=true]{background:var(--v)}
+.st[aria-pressed=true] small{color:#fff}
+.how ol{margin:.4em 0;padding-left:1.3em}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.checks input{flex:none;width:20px;height:20px;margin-top:2px}
+.wc{font:600 14px Arial,sans-serif;color:var(--mut);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+button.b{font:700 15px Arial,sans-serif;padding:12px 16px;border-radius:8px;border:0;cursor:pointer;background:var(--p);color:#fff}
+button.b.alt{background:#fff;color:var(--p);border:2px solid var(--p)}
+button.b.fin{background:var(--a)}
+button.b:disabled{background:#6f6f6f;color:#fff;cursor:not-allowed}
+#status{font:600 15px Arial,sans-serif;margin:8px 0} #status.err{color:#b03a2e} #status.ok{color:var(--v)}
+#todo{font:14px Arial,sans-serif;color:var(--mut)}
+.key{background:rgba(227,185,142,.3);border:1px solid var(--g);border-radius:8px;padding:10px 12px;margin-top:10px;font:15px/1.5 Arial,sans-serif}
+.badge{display:inline-block;font:700 13px Arial,sans-serif;color:#fff;padding:3px 9px;border-radius:5px;margin-right:6px}
+footer{margin-top:36px;padding:16px;background:#283747;color:#E3B98E;font:700 12.5px Arial,sans-serif;letter-spacing:.08em;text-align:center}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">THINKING LIKE A HISTORIAN 9 · 1865–1877</div>
+<h1>Failed or Overthrown?</h1>
+<div class="sub">Reconstruction and Contested Citizenship · Debating Reconstruction’s Demise · Crack the Case</div>
+</div></header>
+<main class="wrap">
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0;font-size:19px"><b>Did Reconstruction fail for many reasons, or was it overthrown by organized violence?</b></p>
+<p style="margin:.3em 0">Your job: read the background, examine four primary sources that historians use in this debate, then close the case with a one-page essay.</p></div>
+<div class="box how"><div class="lab">How to play</div><ol>
+<li><b>Part 1:</b> Read the Background Reading and answer the one-sentence check.</li>
+<li><b>Part 2:</b> For each case file, read the excerpt, then tap which historian’s argument it helps most:<ul><li><b>★ MANY CAUSES</b>: Reconstruction failed for several reasons: money, land, politics, and weak Northern will (Foner, 1988).</li><li><b>◆ OVERTHROWN BY VIOLENCE</b>: White conservatives destroyed it with terror; “failure” hides who did it (Williams, 2023).</li><li><b>● BOTH / MIXED</b>: Helps both sides, or does not fit either one cleanly.</li></ul></li>
+<li>Type who made the source, when, and one key fact from the Background Reading, then copy the clue words that prove your choice and finish the sentence “This helps ___ because…”.</li>
+<li><b>Part 3:</b> Write your one-page essay and check the four boxes.</li>
+<li>Use <b>Save Progress</b> any time. When everything is done, <b>Finished</b> turns on.</li></ol></div>
+<div class="box"><div class="names">
+<div><label for="first">First name</label><input type="text" id="first" data-id="first" autocomplete="given-name"></div>
+<div><label for="last">Last name</label><input type="text" id="last" data-id="last" autocomplete="family-name"></div>
+<div><label for="period">Period</label><input type="text" id="period" data-id="period"></div>
+<div><label for="date">Date</label><input type="text" id="date" readonly placeholder="fills in at Finished"></div>
+</div></div>
+<h2>Part 1 · Background Reading</h2>
+<div class="box"><div class="article"><h3>Why Did Reconstruction End?</h3><p>When the Civil War ended in 1865, about four million formerly enslaved people were free, and the nation faced hard questions: What rights would freed people have? Who would own the land? How would the Southern states return to the Union? The Thirteenth Amendment abolished slavery in December 1865. Congress had created the Freedmen’s Bureau that March to help freed people with food, schools, and labor contracts. It was led by General Oliver Otis Howard. Early in 1865 General William T. Sherman had set aside coastal land in South Carolina, Georgia, and Florida for freed families, and thousands settled there on plots of up to forty acres.</p><p>After Abraham Lincoln’s assassination, President Andrew Johnson pardoned most former Confederates and ordered most of that land returned to its former owners. In October 1865, freedmen on Edisto Island, South Carolina, heard this news from General Howard and sent a petition to the president asking to keep or buy their land. They did not get it. Southern legislatures also passed “Black codes” that restricted where freed people could work and live. Congress answered with the Fourteenth Amendment, which defined citizenship and promised equal protection, and with the Reconstruction Acts of 1867, which divided the South into military districts. The Fifteenth Amendment (1870) said the vote could not be denied because of race. For a time, Black men voted in large numbers and held offices from town councils to Congress.</p><p>White resistance began early. The Ku Klux Klan formed in Tennessee in 1866 and spread across the South, attacking Black and white Republicans to keep them from voting and organizing. Congress passed Enforcement Acts in 1870 and 1871, and in 1871 a joint committee held hearings in South Carolina, where victims and their families, including Charlotte Fowler, testified about night-time attacks.</p><p>Northern support weakened. The Panic of 1873 began a long depression, scandals hurt the Republican Party, and many Northerners grew tired of Reconstruction. Southern Democrats, who called themselves Redeemers, won back state after state. In Mississippi in 1875, armed white men known as “white liners” attacked Republican gatherings, including a barbecue in Clinton on September 4. Governor Adelbert Ames, a Republican from Maine and a former Union general, asked President Ulysses S. Grant for troops. Grant refused. After the disputed election of 1876, the Compromise of 1877 gave Rutherford B. Hayes the presidency and the last federal troops left the South. Most freedpeople, without land of their own, became sharecroppers who farmed another person’s land for a share of the crop. In 1879 and 1880 thousands of Black southerners left for Kansas, and a United States Senate committee in 1880 investigated why. R. B. Avery, a white man from the North who had settled in Georgia, testified.</p><p>Historians still argue about what ended Reconstruction. In 1988 Eric Foner concluded that Reconstruction “failed,” but for many reasons: the depression and the banking system limited economic change, the refusal to give freed people land left a powerful planter class in place, Republicans suffered from factionalism and corruption and could not win over white voters, violence turned elections, and Northern resolve faded. In 2023 Kidada E. Williams argued that the word “failure” hides what happened. Using the stories of Black survivors, she showed that white conservatives waged a paramilitary war against Reconstruction and overthrew it. As you read, ask which argument each source helps, and remember that some sources help both.</p></div>
+<label for="rdg">In one sentence, explain how Foner and Williams differ in explaining the end of Reconstruction.</label>
+<textarea id="rdg" data-id="rdg" rows="2"></textarea></div>
+<h2>Part 2 · The Case Files</h2>
+<div class="meter"><div class="mtext" id="mtext">0 of 4 case files cracked</div><div class="bar"><i id="mbar"></i></div></div>
+<section class="case" id="case1" data-i="1"><div><span class="chip">1865</span><span class="cnum">Case file 1 of 4</span></div>
+<div class="who">Who: Henry Bram, Ishmael Moultrie, and Yates Sampson, a committee of freedmen on Edisto Island, South Carolina<br>From: Petition to President Andrew Johnson</div>
+<p class="intro">Formerly enslaved people react to news that their land may be given back to its former owners.</p>
+<blockquote>This is our home, we have made These lands what they are. we were the only true and Loyal people that were found in posession of these Lands.&nbsp;.&nbsp;.&nbsp;. Shall not we who Are freedman and have been always true to this Union have the same rights as are enjoyed by Others? &nbsp;.&nbsp;.&nbsp;. Have we forfieted our rights of property In Land?– If not then! are not our rights as A free people and good citizens of these United States To be considered before the rights of those who were Found in rebellion against this good and just Goverment&nbsp;.&nbsp;.&nbsp;. We are ready to pay for this land When Government calls for it.</blockquote>
+<div class="cite">Henry Bram et al. to the President of these United States, Edisto Island, S.C., October 28, 1865, in <i>Freedom: A Documentary History of Emancipation, Series 3, Vol. 1: Land and Labor, 1865</i>, Freedmen and Southern Society Project, University of Maryland. Original spelling kept.</div>
+<div class="help"><b>Word help:</b> posession = possession · forfieted = forfeited, given up · rebellion = the Confederate rebellion · Goverment = government</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 1"><button type="button" class="st" data-v="N" aria-pressed="false">★ MANY CAUSES<small>Reconstruction failed for several reasons: money, land, politics, and weak Northern will (Foner, 1988).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OVERTHROWN BY VIOLENCE<small>White conservatives destroyed it with terror; “failure” hides who did it (Williams, 2023).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx1">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx1" data-id="ctx1" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note1">Clue words</label>
+<textarea id="note1" data-id="note1" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section><section class="case" id="case2" data-i="2"><div><span class="chip">1871</span><span class="cnum">Case file 2 of 4</span></div>
+<div class="who">Who: Charlotte Fowler, a Black woman in Spartanburg County, South Carolina<br>From: Testimony before the Joint Select Committee of Congress on Ku Klux outrages</div>
+<p class="intro">A widow answers questions from members of Congress about the death of her husband.</p>
+<blockquote>Question. How long ago is it since your husband was killed? Answer. It was the 1st of May.&nbsp;.&nbsp;.&nbsp;. Question. What are these men called that go about masked in that way? Answer. I don’t know; they call them Ku-Klux.&nbsp;.&nbsp;.&nbsp;. Question. Did your old man belong to any party? Answer. Yes, sir. Question. What party? Answer. The radicals.&nbsp;.&nbsp;.&nbsp;. Question. Are the colored people afraid of these people that go masked? Answer. Yes, sir; they are as afraid as death of them. There is now a whole procession of people that have left their houses and are lying out.</blockquote>
+<div class="cite">Testimony of Charlotte Fowler, Spartanburgh, S.C., July 6, 1871, in <i>Testimony Taken by the Joint Select Committee to Enquire into the Condition of Affairs in the Late Insurrectionary States, South Carolina</i>, vol. 3 (Washington, DC: Government Printing Office, 1872), 386–392, via Teaching American History.</div>
+<div class="help"><b>Word help:</b> masked = wearing a mask to hide a face · the radicals = Radical Republicans, the party of Black voters · lying out = sleeping outdoors in hiding</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 2"><button type="button" class="st" data-v="N" aria-pressed="false">★ MANY CAUSES<small>Reconstruction failed for several reasons: money, land, politics, and weak Northern will (Foner, 1988).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OVERTHROWN BY VIOLENCE<small>White conservatives destroyed it with terror; “failure” hides who did it (Williams, 2023).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx2">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx2" data-id="ctx2" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note2">Clue words</label>
+<textarea id="note2" data-id="note2" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section><section class="case" id="case3" data-i="3"><div><span class="chip">1875</span><span class="cnum">Case file 3 of 4</span></div>
+<div class="who">Who: Adelbert Ames, Republican governor of Mississippi<br>From: Letter to his wife, Blanche Butler Ames</div>
+<p class="intro">The governor writes the day after a deadly attack on a Republican gathering.</p>
+<blockquote>There were present at a Republican barbecue about fifteen hundred colored people, men, women and children. Seeking the opportunity white men, fully prepared, fired into this crowd.&nbsp;.&nbsp;.&nbsp;. Last night, this morning and today squads of white men are scouring the county killing Negroes.&nbsp;.&nbsp;.&nbsp;. This is but in keeping with the programme of the Democracy at this time. They know we have a majority of some thirty thousand and to overcome it they are resorting to intimidation and murder.&nbsp;.&nbsp;.&nbsp;. I shall at once try to get troops from the general government. Of course it will be a difficult thing to do.</blockquote>
+<div class="cite">Adelbert Ames to Blanche Butler Ames, Jackson, Miss., September 5, 1875, in <i>Chronicles from the Nineteenth Century: Family Letters of Blanche Butler and Adelbert Ames</i>, vol. 2 (privately printed, 1957), via the Internet Archive.</div>
+<div class="help"><b>Word help:</b> programme = plan · the Democracy = the Democratic Party · intimidation = scaring people into obeying · squads = small armed groups</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 3"><button type="button" class="st" data-v="N" aria-pressed="false">★ MANY CAUSES<small>Reconstruction failed for several reasons: money, land, politics, and weak Northern will (Foner, 1988).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OVERTHROWN BY VIOLENCE<small>White conservatives destroyed it with terror; “failure” hides who did it (Williams, 2023).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx3">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx3" data-id="ctx3" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note3">Clue words</label>
+<textarea id="note3" data-id="note3" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section><section class="case" id="case4" data-i="4"><div><span class="chip">1880</span><span class="cnum">Case file 4 of 4</span></div>
+<div class="who">Who: R. B. Avery, a white man from the North who settled in Georgia<br>From: Testimony before a United States Senate committee</div>
+<p class="intro">A witness describes the homes of Black farmers he visited in Georgia.</p>
+<blockquote>I do not say that what I saw was a fair average, but I went to the homes of perhaps one hundred and fifty different men. In all of these houses I found but two chairs—just two chairs in all of them.&nbsp;.&nbsp;.&nbsp;. I thought I had seen poverty in the great cities of the country and elsewhere, but I never saw anything to compare with the poverty of those negroes there.&nbsp;.&nbsp;.&nbsp;. The claims of the colored people were for property taken in 1865. They had more in 1865 than they have had since, and I think their claims amounted to more than the entire value of the whole county now.</blockquote>
+<div class="cite">Testimony of R. B. Avery, Washington, D.C., March 17, 1880, <i>Report and Testimony of the Select Committee of the U.S. Senate to Investigate the Causes of the Removal of the Negroes from the Southern States to the Northern States</i>, Part II, 46th Congress, 2nd Session, Report 693 (Washington: Government Printing Office, 1880), 260–261.</div>
+<div class="help"><b>Word help:</b> claims = requests for payment or return of property · property taken = goods seized from freedpeople in 1865 · negroes = the period word for Black people</div>
+<div class="ask">Which historian’s argument does this source help most?</div>
+<div class="stances" role="group" aria-label="Stance for case file 4"><button type="button" class="st" data-v="N" aria-pressed="false">★ MANY CAUSES<small>Reconstruction failed for several reasons: money, land, politics, and weak Northern will (Foner, 1988).</small></button><button type="button" class="st" data-v="S" aria-pressed="false">◆ OVERTHROWN BY VIOLENCE<small>White conservatives destroyed it with terror; “failure” hides who did it (Williams, 2023).</small></button><button type="button" class="st" data-v="V" aria-pressed="false">● BOTH / MIXED<small>Helps both sides, or does not fit either one cleanly.</small></button></div>
+<label for="ctx4">Context: who made this, when, and what was going on? Use facts from the Background Reading.</label>
+<textarea id="ctx4" data-id="ctx4" rows="2" placeholder="Who made it, when, and one key fact from the Background Reading"></textarea>
+<label for="note4">Clue words</label>
+<textarea id="note4" data-id="note4" rows="2" placeholder="“clue words” — This helps ___ because…"></textarea>
+</section>
+<h2>Part 3 · Case Closed</h2>
+<div class="box cq"><div class="lab">Central Question:</div><p style="margin:.3em 0"><b>Did Reconstruction fail for many reasons, or was it overthrown by organized violence?</b></p></div>
+<div class="box"><p><b>Your essay question:</b> Did Reconstruction mainly fail for many reasons, or was it mainly overthrown by organized violence? Take a position and defend it with the case files.</p>
+<p>Write about one page (about 250 to 350 words; at least 150 words to finish). Use this order:</p>
+<ol><li><b>Claim:</b> your answer to the question in one or two sentences.</li>
+<li><b>Evidence 1:</b> a quote from one case file, with what it shows and one context fact.</li>
+<li><b>Evidence 2:</b> a quote from a <i>different</i> case file, explained the same way.</li>
+<li><b>Counter-Argument:</b> name a case file someone on the other side would use, explain their point, then answer it.</li>
+<li><b>Conclusion:</b> name one way the end of Reconstruction shaped the nation’s future.</li></ol>
+<label for="essay">Your essay</label>
+<textarea id="essay" data-id="essay" rows="18" style="min-height:360px"></textarea>
+<div class="wc" id="wc">0 words</div>
+<div class="checks" style="margin-top:12px">
+<label><input type="checkbox" id="chk1" data-id="chk1"> My essay opens with a clear claim.</label>
+<label><input type="checkbox" id="chk2" data-id="chk2"> I used evidence from at least two different case files.</label>
+<label><input type="checkbox" id="chk3" data-id="chk3"> I stated a Counter-Argument and answered it.</label>
+<label><input type="checkbox" id="chk4" data-id="chk4"> My conclusion explains why the end of Reconstruction mattered for the nation’s future.</label>
+</div></div>
+<div class="btns">
+<button type="button" class="b" id="save">Save Progress</button>
+<button type="button" class="b alt" id="loadBtn">Load Progress</button>
+<input type="file" id="loadFile" accept=".json,application/json" hidden>
+<button type="button" class="b fin" id="finish" disabled>Finished — Download File to Submit</button>
+</div>
+<div id="status" role="status" aria-live="polite"></div>
+<div id="todo"></div>
+</main>
+<footer>UNIT 3 · A HOUSE DIVIDED AND REBUILT | HIST C1001 | DANIEL GARZA, M.A.</footer>
+<script>
+
+(function(){
+var PACKET="L9_Thinking_Like_a_Historian", STORE="c1001_l9_thinking_like_a_historian", COURSE="HIST C1001", NC=4;
+var $=function(id){return document.getElementById(id)};
+var sides={};
+function fields(){return Array.prototype.slice.call(document.querySelectorAll('[data-id]'))}
+function words(t){t=(t||'').trim();return t?t.split(/\s+/).length:0}
+function val(id){var e=$(id);return e?(e.value||'').trim():''}
+function cracked(i){return !!sides[i]&&val('note'+i)&&val('ctx'+i)}
+function missing(){
+  var m=[];
+  if(!val('first')||!val('last')||!val('period'))m.push('first name, last name, and period');
+  if(!val('rdg'))m.push('Background Reading check');
+  var c=[];for(var i=1;i<=NC;i++){if(!cracked(i))c.push(i)}
+  if(c.length)m.push('case file'+(c.length>1?'s ':' ')+c.join(', ')+' (stance, context, and clue words)');
+  if(words(val('essay'))<150)m.push('essay (at least 150 words)');
+  var k=[];for(var j=1;j<=4;j++){if(!$('chk'+j).checked)k.push(j)}
+  if(k.length)m.push('checklist box'+(k.length>1?'es ':' ')+k.join(', '));
+  return m;
+}
+function render(){
+  var n=0;
+  for(var i=1;i<=NC;i++){
+    var card=$('case'+i);var ok=cracked(i);if(ok)n++;
+    card.classList.toggle('done',!!sides[i]);card.classList.toggle('isS',sides[i]==='S');card.classList.toggle('isV',sides[i]==='V');
+    card.querySelectorAll('.st').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===sides[i]?'true':'false')});
+  }
+  $('mtext').textContent=n+' of '+NC+' case files cracked';$('mbar').style.width=(n*100/NC)+'%';
+  var w=words(val('essay'));$('wc').textContent=w+' word'+(w===1?'':'s')+(w<150?' (150 needed to finish)':'');
+  var m=missing();$('finish').disabled=m.length>0;
+  $('todo').textContent=m.length?('Still to do: '+m.join('; ')):'Everything is done. Click Finished to download your file.';
+}
+function collect(done){
+  var a={},ch={};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')ch[id]=e.checked;else if(['first','last','period'].indexOf(id)<0)a[id]=e.value});
+  var t={national:0,state:0,voice:0};for(var i=1;i<=NC;i++){if(sides[i]==='N')t.national++;if(sides[i]==='S')t.state++;if(sides[i]==='V')t.voice++}
+  return {packet:PACKET,course:COURSE,version:1,saved:new Date().toISOString(),completed:!!done,
+    student:{first:val('first'),last:val('last'),period:val('period'),date:$('date').value||''},
+    sides:JSON.parse(JSON.stringify(sides)),answers:a,checks:ch,tally:t};
+}
+function apply(d){
+  sides={};Object.keys(d.sides||{}).forEach(function(k){sides[k]=d.sides[k]});
+  var s=d.student||{};$('first').value=s.first||'';$('last').value=s.last||'';$('period').value=s.period||'';$('date').value=s.date||'';
+  var a=d.answers||{},ch=d.checks||{};
+  fields().forEach(function(e){var id=e.dataset.id;if(e.type==='checkbox')e.checked=!!ch[id];else if(id in a)e.value=a[id]});
+  render();
+}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(collect(false)))}catch(e){}}
+function fname(){return (val('last')+'_'+val('first')).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9_\-]+/g,'_')}
+function download(name,obj){
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var u=URL.createObjectURL(blob);
+  var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+}
+function msg(t,cls){var s=$('status');s.textContent=t;s.className=cls||''}
+function needNames(){
+  var bad=false;['first','last','period'].forEach(function(id){var e=$(id);var b=!e.value.trim();e.classList.toggle('bad',b);if(b)bad=true});
+  return bad;
+}
+document.querySelectorAll('.case').forEach(function(card){
+  var i=card.dataset.i;
+  card.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){sides[i]=b.dataset.v;render();persist()})});
+});
+fields().forEach(function(e){e.addEventListener(e.type==='checkbox'?'change':'input',function(){if(e.classList.contains('bad')&&e.value.trim())e.classList.remove('bad');render();persist()})});
+$('save').addEventListener('click',function(){
+  if(needNames()){msg('Type your first name, last name, and period before you save.','err');return}
+  var f=fname()+'-'+PACKET+'-PROGRESS.json';download(f,collect(false));
+  msg('Saved '+f+'. Keep that file. Use Load Progress later. Do not upload it to Canvas until you are finished.','ok');
+});
+$('loadBtn').addEventListener('click',function(){$('loadFile').value='';$('loadFile').click()});
+$('loadFile').addEventListener('change',function(){
+  var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.packet!==PACKET)throw 0;apply(d);persist();msg('Progress loaded. Pick up where you left off.','ok')}
+    catch(e){msg('That file is not a saved file from this assignment. Choose the file that ends in -'+PACKET+'-PROGRESS.json.','err')}};
+  r.readAsText(f);
+});
+$('finish').addEventListener('click',function(){
+  if(missing().length){msg('Not finished yet. Read the line below to see what is missing.','err');render();return}
+  var d=new Date();$('date').value=(d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear();
+  var f=fname()+'-'+PACKET+'.json';download(f,collect(true));persist();
+  msg('Finished! Your file '+f+' downloaded. Upload that file to Canvas.','ok');
+});
+try{var raw=localStorage.getItem(STORE);if(raw){var d=JSON.parse(raw);if(d&&d.packet===PACKET)apply(d)}}catch(e){}
+render();
+})();
+</script></body></html>
